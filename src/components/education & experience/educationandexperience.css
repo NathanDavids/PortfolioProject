@@ -1,0 +1,15 @@
+#educationandexperience{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: grey;
+}
+
+#educationandexperienceContainer{
+    margin-top: 5.6rem;
+    width: 95%;
+    height: 90vh;
+    background-color: black;
+}
