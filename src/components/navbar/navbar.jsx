@@ -27,35 +27,35 @@ function Navbar() {
             <div className={active}>
                 <ul className='navLists flex'>
                     <li className='navItem'>
-                        <a href="#" className='navLink'>Home</a>
+                        <a href="#home" className='navLink'>Home</a>
                     </li>
 
                     <li className='navItem'>
-                        <a href="#" className='navLink'>About</a>
+                        <a href="#about" className='navLink'>About</a>
                     </li>
 
                     <li className='navItem'>
-                        <a href="#" className='navLink'>Education</a>
+                        <a href="#educationandexperience" className='navLink'>Education</a>
                     </li>
 
                     <li className='navItem'>
-                        <a href="#" className='navLink'>Experience</a>
+                        <a href="#experience" className='navLink'>Experience</a>
                     </li>
 
                     <li className='navItem'>
-                        <a href="#" className='navLink'>Skills</a>
+                        <a href="#skills" className='navLink'>Skills</a>
                     </li>
 
                     <li className='navItem'>
-                        <a href="#" className='navLink'>Projects</a>
+                        <a href="#projects" className='navLink'>Projects</a>
                     </li>
 
                     <li className='navItem'>
-                        <a href="#" className='navLink'>Blog</a>
+                        <a href="#blog" className='navLink'>Blog</a>
                     </li>
 
                     <li className='navItem'>
-                        <a href="#" className='navLink'>Contact</a>
+                        <a href="#contact" className='navLink'>Contact</a>
                     </li>
                 </ul>
 

@@ -3,13 +3,24 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-color: grey;
 }
 
 #educationandexperienceContainer{
     margin-top: 5.6rem;
     width: 95%;
-    height: 90vh;
-    background-color: black;
+    height: 120vh;
+    background-color: white;
+    overflow: hidden;
+}
+
+@media screen and (max-width:600px){
+    #educationandexperience{
+        height: 220vh;
+    }
+    
+    #educationandexperienceContainer{
+        height: 220vh;
+    }
 }
