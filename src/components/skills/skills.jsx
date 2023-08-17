@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import '../skills/skills.css'
 import HTML from '../../assets/html1.png'
 import CSS from '../../assets/css.png'
@@ -10,30 +10,32 @@ import Github from '../../assets/github.png'
 import JS from '../../assets/javascript.png'
 
 function skills() {
-  let imgBx = document.querySelectorAll('.imgBx');
-  let contentBx = document.querySelectorAll('.contentBx');
-
-  for (let i=0; i<imgBx.length; i++){
-    imgBx[i].addEventListener('mouseover', function(){
-      for (let i=0; i<contactBx.length; i++){
-        contentBx[i].className = 'contentBx';
-      }
-      document.getElementById(this.dataset.id).className = 'contentBx active';
-
-      for (let i=0; i<imgBx.length; i++){
-        imgBx[i].className = 'imgBx';
-      }
-      this.className = 'imgBx active'
-    })
-  }
+    useEffect(() => {
+        let imgBx = document.querySelectorAll('.imgBx');
+        let contentBx = document.querySelectorAll('.contentBx');
+    
+        for (let i = 0; i < imgBx.length; i++) {
+          imgBx[i].addEventListener('mouseover', function () {
+            for (let j = 0; j < contentBx.length; j++) {
+              contentBx[j].className = 'contentBx';
+            }
+            document.getElementById(this.dataset.id).className = 'contentBx active';
+    
+            for (let j = 0; j < imgBx.length; j++) {
+              imgBx[j].className = 'imgBx';
+            }
+            this.className = 'imgBx active';
+          });
+        }
+      }, []); // Empty dependency array to run the effect only once
 
 
   
   return (
     <>
-    <section id='skills'>
-      <div id='skillsContainer'>
-          <div id='symbol'>
+    <section id='skills' className='flex justify-center items-center h-screen bg-black'>
+      <div id='skillsContainer' className='relative w-72 h-72 sm:w-96 sm:h-96 border-2 border-white rounded-full shadow-2xl'>
+          <div id='symbol' className='absolute left-0 w-full h-full flex justify-center items-center cursor-pointer'>
               <div className='imgBx active' style={{ '--i': 1}} data-id='content1'>
                 <img src={HTML}/>
               </div>
@@ -59,7 +61,7 @@ function skills() {
                 <img src={JS}/>
             </div>
           </div>
-          <div className="content">
+          <div className='content w-full h-full flex justify-center items-center'>
         <div className="contentBx active" id='content1'>
             <div className="card">
                 <div className="imgBx">
