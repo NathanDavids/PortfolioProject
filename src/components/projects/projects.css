@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 100%;
     height: 100vh;
     background-color: black;
@@ -25,3 +26,71 @@
 .listBox{
     box-shadow: 5px 5px 10px rgba(217, 23, 31, 1);
 }
+
+#projectName {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+  }
+
+  #letter{
+    outline: none;
+    border: none;
+  }
+
+  .letter{
+    height: 60px;
+    display: inline-block;
+    background-color: transparent;
+    text-shadow: 4px 5px 6px rgba(217, 23, 31, 1);
+    border-radius: 50px;
+    outline: none;
+    border: none;
+  }
+  
+  #projectName > * {
+    display: block;
+    margin: 5px 0; /* Adjust the spacing between letters as needed */
+  }
+
+  #number{
+    color: rgba(217, 255, 255, 0.10);
+    font-size: 75px;
+  }
+
+  #linkBtn{
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 5px 5px 8px rgba(217, 23, 31, 1);
+    width: 170px;
+    height: 50px;
+    position: relative;
+    left: -55%;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    #projectName {
+      flex-direction: row;
+      gap: 15px;
+    }
+    #linkBtn{
+        position: relative;
+        top: 10rem;
+        left: -13rem;
+    }
+    .listBox{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    #websiteImg{
+        left: 30%;
+        height: 60px;
+        width: 120px;
+    }
+    #linkBtn{
+      left: 0%;
+    }
+  }
