@@ -54,7 +54,7 @@
     background-color: white;
     box-shadow: 10px 8px 15px rgba(217, 23, 31, 1);
     width: 25%;
-    height: 70%;
+    height: 90%;
     .postHeading{
         display: flex;
         justify-content: center;
@@ -73,7 +73,7 @@
         width: 150px;
         height: 55px;
         position: relative;
-        left: 75px;
+        left: 100px;
         color: var(--PrimaryTextColour);
         background-color: var(--BackgroundColour);
         border-radius: 20px;
@@ -89,7 +89,7 @@
     background-color: white;
     box-shadow: 10px 8px 15px rgba(217, 23, 31, 1);
     width: 25%;
-    height: 70%;
+    height: 90%;
     .postHeading{
         display: flex;
         justify-content: center;
@@ -108,7 +108,7 @@
         width: 150px;
         height: 55px;
         position: relative;
-        left: 75px;
+        left: 100px;
         color: var(--PrimaryTextColour);
         background-color: var(--BackgroundColour);
         border-radius: 20px;
@@ -122,7 +122,7 @@
     background-color: white;
     box-shadow: 10px 8px 15px rgba(217, 23, 31, 1);
     width: 25%;
-    height: 70%;
+    height: 90%;
     .postHeading{
         display: flex;
         justify-content: center;
@@ -140,7 +140,7 @@
         align-items: center;
         width: 150px;
         height: 55px;
-        margin-left: 75px;
+        margin-left: 100px;
         color: var(--PrimaryTextColour);
         background-color: var(--BackgroundColour);
         border-radius: 20px;

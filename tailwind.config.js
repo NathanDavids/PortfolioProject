@@ -11,6 +11,7 @@ export default {
       'PrimaryTextColour': '#FFFFFF',
       'SecondaryTextColour': '#D9171F',
       'grey': '#d1d5db',
+      'box' : "rgba(255, 255, 255, 0.05)",
       primary: "var(--color-primary)",
       },
       backgroundImage: {

@@ -13,14 +13,15 @@ function contact() {
     <>
     <section id='contact'>
     <div id='contactContainer' classname="flex w-full min-h-screen max-w-4xl p-8 rounded-xl shadow-lg">
-      <div className="form flex flex-col md:flex-row md:space-x-6 md:space-y-0 space-y-6 sm:p-12 bg-[grey] w-full max-w-7xl p-8 rounded-xl shadow-lg text-white">
+      <div id='form' className="form flex flex-col md:flex-row md:space-x-6 md:space-y-0 space-y-6 sm:p-12 w-full max-w-7xl p-8 rounded-xl shadow-lg text-white">
         <div className="flex flex-col space-y-8 justify-between">
           <div>
-            <h1 className="flex justify-center font-bold text-4xl tracking-wide"> Contact Me </h1>
-            <p className="flex justify-center text-center pt-2 text-white-100 text-sm"> It would be amazing to chat, exchange ideas, and explore potential collaboration opportunities.
+            <h1 id='heading' className="flex justify-center font-bold text-4xl tracking-wide"> Contact <span id='heading2'> Me </span> </h1>
+            <br />
+            <p id='subheading' className="flex justify-center text-center pt-2 text-white-100 text-sm"> It would be amazing to chat, exchange ideas, and explore potential collaboration opportunities.
               Let's schedule a call or grab a coffee sometime soon. Looking forward to hearing from you and embarking on an exciting journey of creativity together. </p>
           </div>
-          <div className="flex flex-col items-center  space-y-4">
+          <div id='icon' className="flex flex-col items-center  space-y-4">
             <div className="inline-flex space-x-2 items-center">
               <FaMapMarkedAlt className="icon text-white-300 text-xl"/>
               <span>Cape Town, South Africa</span>
@@ -35,13 +36,13 @@ function contact() {
             </div>
           </div>
           <div className="flex justify-center text-4xl tracking-wide">
-            <h2>Socials</h2>
+            <h2 id='socialHeading'>Socials</h2>
           </div>
           <div className="flex justify-center justify-around space-x-4 text-4xl">
-            <a href=""><BsLinkedin/></a>
-            <a href=""><BsGithub/></a>
-            <a href=""><BsWhatsapp/></a>
-            <a href=""><BsInstagram/></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><BsLinkedin/></a>
+            <a href="https://github.com/NathanDavids" target="_blank" rel="noopener noreferrer"><BsGithub/></a>
+            <a href="https://wa.link/38j3gp" target="_blank" rel="noopener noreferrer"><BsWhatsapp/></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><BsInstagram/></a>
           </div>
           <div className="bg-black rounded-xl shadow-lg p-8">
             <form action="" className="flex flex-col space-y-4">
@@ -61,7 +62,7 @@ function contact() {
                 <label htmlFor="" className="text-sm"> Message </label>
                 <textarea type="text" placeholder="Message" rows="4" className="text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600" />
               </div>
-              <button className="inline-block self-center bg-gray-700 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm"> Send Message </button>
+              <button id='sendBtn' className="inline-block self-center text-white font-bold rounded-lg px-6 py-2 uppercase text-sm hover:bg-[#D9171F]"> Send Message </button>
             </form>
           </div>
         </div>
