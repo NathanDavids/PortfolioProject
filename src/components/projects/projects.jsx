@@ -38,7 +38,7 @@ function projects() {
     <section id='projects'>
     <div id='projectsContainer' className='flex h-full w-full items-center justify-center'>
       <div className='w-[1200px] max-w-full h-full max-h-full'>
-        <ul className='group flex flex-col md:h-[640px] md:flex-row md:gap-[1.5%]'>
+        <ul className='group flex flex-col mt-20 md:h-[640px] md:flex-row md:gap-[1.5%]'>
           {List.map((Lists, index) => (
            <li id='contentContainer'
            onClick={() => setActiveItem(index)}
@@ -48,7 +48,7 @@ function projects() {
            }`}
            key={Lists.name}
          >
-           <div className='listBox relative h-[125px] md:h-[100%] w-[98%] overflow-hidden rounded-4xl bg-[#000000] mb-4'>
+           <div className='listBox relative h-[125px] md:h-[99%] w-[90%] overflow-hidden rounded-4xl mb-4'>
              <img id='websiteImg'
                className={`absolute right-0 max-w-none h-auto w-[150px] md:h-[640px] md:w-[800px] left-1/2 top-1/2 md:-translate-x-1/2 -translate-y-1/2 object-cover grayscale ${
                  activeItem === index ? 'opacity-1' : 'opacity-0'
