@@ -6,6 +6,27 @@
     --BoxShadow: 0 2px 4px rgba(217, 23, 31, 1);
 }
 
+.navItem {
+    position: relative; /* Add this for positioning the pseudo-element */
+  }
+  
+  .navItem::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    top: 23px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the border */
+    width: 40%; /* Adjust the width as needed */
+    height: 5px; /* Border thickness */
+    background-color: #D9171F; /* Border color */
+    opacity: 0; /* Start with no border */
+    transition: opacity 0.3s; /* Add a transition effect for smoother appearance */
+  }
+  
+  .navItem.selected::after {
+    opacity: 1; /* Show the border for the selected item */
+  }
 
 .header{
     position: fixed; /* Sticky */
