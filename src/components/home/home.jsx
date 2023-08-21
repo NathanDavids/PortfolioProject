@@ -20,7 +20,7 @@ function home() {
           </div>
         </div>
         <div id='homeTextContainer'>
-          <h1>
+          <h1 id='homeQuote'>
           "Hard Work Beats Talent When Talent <span className='quoteRed'> Doesn't Work Hard"</span>
           </h1>
         </div>
@@ -30,6 +30,9 @@ function home() {
           <IoLogoWhatsapp className='icon'/>
           <MdLightMode className='icon'/>
         </div>
+        <div id='btnContainer'>
+          <button id='downloadBtn' >Download CV</button>
+          </div>
       </div>
     </section>
     </>

@@ -1,3 +1,12 @@
+/* Dark Theme Colours */
+:root{
+    --BackgroundColour: black;
+    --PrimaryTextColour: #FFFFFF;
+    --SecondaryTextColour: #D9171F;
+    --BoxShadow: 0 2px 4px rgba(217, 23, 31, 1);
+}
+
+
 #home{
     display: flex;
     justify-content: center;
@@ -54,4 +63,53 @@
 .homeImg{
     width: 1200px;
     height: 1160px;
+}
+
+#homeTextContainer{
+    background-color: lightcoral;
+    width: 370px;
+    height: 400px;
+    position: relative;
+    top: -460px;
+    text-align: center;
+}
+
+#homeQuote{
+    font-size: 55px;
+}
+
+.quoteRed{
+    color: var(--SecondaryTextColour);
+}
+
+#homeSocialsContainer{
+    background-color: lightcoral;
+    width: 200px;
+    height: 400px;
+    position: relative;
+    top: -930px;
+    left: 980px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+#btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    top: -920px;
+    left: 980px;
+}
+
+#downloadBtn{
+    background-color: gray;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
 }
