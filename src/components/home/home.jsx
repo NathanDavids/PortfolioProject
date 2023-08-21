@@ -13,7 +13,10 @@ function home() {
       <div id='homeContainer'>
         <div id='mainContainer'>
           <div id='nameContainer'>
-            <h1>Nathan <span>Davids</span> Nathan <span> Davids</span></h1>         
+            <h1>Nathan <span className='surnameText'>Davids</span> Nathan <span className='surnameText'> Davids </span>
+            Nathan <span className='surnameText'>Davids </span> Nathan <span className='surnameText'> Davids </span> Nathan 
+            <span className='surnameText'>Davids</span>
+            </h1>         
           </div>
           <div id='homeImgContainer'>
             <img src={HomePicture} alt="" className='homeImg'/>

@@ -47,6 +47,11 @@
     background-color: lightblue;
     font-size: 85px;
     flex-wrap: wrap;
+    animation: name 5s linear infinite;
+}
+
+.surnameText{
+    color: var(--SecondaryTextColour);
 }
 
 #homeImgContainer{
@@ -108,8 +113,106 @@
 }
 
 #downloadBtn{
-    background-color: gray;
+    background-color: rgba(255, 255, 255, 0.05);
     width: 150px;
     height: 60px;
     border-radius: 10px;
+    box-shadow: 8px 8px 7px rgba(217, 23, 31, 1);
+}
+
+
+/* Animation for moving name text*/
+
+@keyframes name {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/* Media Queries */ 
+
+@media screen and (max-width:768px){
+    #mainContainer{
+        display: grid;
+
+    }
+    #nameContainer{
+        top: 360px;
+    }
+    
+    #homeImgContainer{
+        height: 300px;
+    }
+    
+    .homeImg{
+        position: relative;
+        top: 145px;
+        width: 600px;
+        height: 600px;
+    }
+    #homeTextContainer{
+       height: 150px;
+       top: -790px;
+       left: 45px;
+    }
+    #homeQuote{
+        font-size: 30px;
+    }
+    #homeSocialsContainer{
+       top: -780px;
+       left: 45px;
+       display: flex;
+       justify-content: space-around;
+       height: 100px;
+       width: 370px;
+    }
+    #btnContainer{
+        top: -770px;
+        left: 130px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    #mainContainer{
+        display: grid;
+
+    }
+    #nameContainer{
+        top: 360px;
+    }
+    
+    #homeImgContainer{
+        height: 300px;
+    }
+    
+    .homeImg{
+        position: relative;
+        top: 145px;
+        width: 600px;
+        height: 600px;
+    }
+    #homeTextContainer{
+       width: 800px;
+       height: 150px;
+       top: -790px;
+       left: 75px;
+    }
+    #homeQuote{
+        font-size: 45px;
+    }
+    #homeSocialsContainer{
+       top: -780px;
+       left: 75px;
+       display: flex;
+       justify-content: space-around;
+       height: 100px;
+       width: 800px;
+    }
+    #btnContainer{
+        top: -770px;
+        left: 380px;
+    }
 }
