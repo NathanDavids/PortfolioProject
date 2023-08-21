@@ -39,7 +39,7 @@ function contact() {
             <h2 id='socialHeading'>Socials</h2>
           </div>
           <div className="flex justify-center justify-around space-x-4 text-4xl">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><BsLinkedin/></a>
+            <a href="https://www.linkedin.com/in/nathan-davids-7a857b233" target="_blank" rel="noopener noreferrer"><BsLinkedin/></a>
             <a href="https://github.com/NathanDavids" target="_blank" rel="noopener noreferrer"><BsGithub/></a>
             <a href="https://wa.link/38j3gp" target="_blank" rel="noopener noreferrer"><BsWhatsapp/></a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><BsInstagram/></a>

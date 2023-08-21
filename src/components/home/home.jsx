@@ -28,9 +28,9 @@ function home() {
           </h1>
         </div>
         <div id='homeSocialsContainer'>
-          <BsLinkedin className='icon'/>
-          <BsGithub className='icon'/>
-          <IoLogoWhatsapp className='icon'/>
+          <a href="https://www.linkedin.com/in/nathan-davids-7a857b233/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='icon'/></a>
+          <a href="https://github.com/NathanDavids" target="_blank" rel="noopener noreferrer"><BsGithub className='icon'/></a>
+          <a href="https://wa.link/38j3gp" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp className='icon'/></a>
           <MdLightMode className='icon'/>
         </div>
         <div id='btnContainer'>
