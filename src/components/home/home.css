@@ -13,7 +13,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: grey;
+    background-color: var(--BackgroundColour);
 }
 
 #homeContainer{
@@ -31,7 +31,7 @@
     width: 100%;
     height: 100%;
     left: 50%;
-    background-color: white;
+    background-color: var(--BackgroundColour);
     overflow: hidden;
 }
 
@@ -41,13 +41,14 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 150px;
+    top: 70px;
     width: 100%;
     height: auto;
-    background-color: lightblue;
-    font-size: 85px;
+    background-color: transparent;
+    color: white;
+    font-size: 150px;
     flex-wrap: wrap;
-    animation: name 5s linear infinite;
+    animation: name 8.5s linear infinite;
 }
 
 .surnameText{
@@ -60,18 +61,19 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
     position: relative;
-    top: -100px;
+    top: -200px;
     width: 100%;
     height: 100%;
 }
 
 .homeImg{
     width: 1200px;
-    height: 1160px;
+    height: 1180px;
 }
 
 #homeTextContainer{
-    background-color: lightcoral;
+    background-color: transparent;
+    color: white;
     width: 370px;
     height: 400px;
     position: relative;
@@ -88,11 +90,12 @@
 }
 
 #homeSocialsContainer{
-    background-color: lightcoral;
+    background-color: transparent;
+    color: white;
     width: 200px;
     height: 400px;
     position: relative;
-    top: -930px;
+    top: -910px;
     left: 980px;
     display: grid;
     justify-content: center;
@@ -114,6 +117,8 @@
 
 #downloadBtn{
     background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 18px;
     width: 150px;
     height: 60px;
     border-radius: 10px;
