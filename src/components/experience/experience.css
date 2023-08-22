@@ -14,3 +14,39 @@
     color: white;
     overflow: hidden;
 }
+
+@media screen and (max-width:768px){
+    #experience{
+        height: 260vh;
+    }
+    #experienceContainer{
+        height: 250vh;
+    }
+}
+
+@media screen and (max-width:1024px){
+    #experience{
+        height: 150vh;
+    }
+    #experienceContainer{
+        height: 150vh;
+    }
+}
+
+@media screen and (max-width:1440px){
+    #experience{
+        height: 140vh;
+    }
+    #experienceContainer{
+        height: 170vh;
+    }
+}
+
+@media screen and (max-width:1600px){
+    #experience{
+        height: 110vh;
+    }
+    #experienceContainer{
+        height: 160vh;
+    }
+}

@@ -16,12 +16,31 @@
     overflow: hidden;
 }
 
-@media screen and (max-width:600px){
+/* Media Queries */
+
+@media screen and (max-width:768px){
     #educationandexperience{
-        height: 220vh;
+        height: 260vh;
     }
-    
     #educationandexperienceContainer{
-        height: 220vh;
+        height: 250vh;
+    }
+}
+
+@media screen and (max-width:1024px){
+    #educationandexperience{
+        height: 120vh;
+    }
+    #educationandexperienceContainer{
+        height: 250vh;
+    }
+}
+
+@media screen and (max-width:1600px){
+    #educationandexperience{
+        height: 200vh;
+    }
+    #educationandexperienceContainer{
+        height: 150vh;
     }
 }
