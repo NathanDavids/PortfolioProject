@@ -336,3 +336,43 @@
     }
 }
 
+@media screen and (min-width:768px) and (max-width:1024px) and (max-width:1024px){
+    #mainContainer{
+        display: grid;
+
+    }
+    #nameContainer{
+        top: 360px;
+    }
+    
+    #homeImgContainer{
+        height: 300px;
+    }
+    
+    .homeImg{
+        position: relative;
+        top: 225px;
+        width: 550px;
+        height: 550px;
+    }
+    #homeTextContainer{
+       width: 708px;
+       height: 150px;
+       top: -790px;
+    }
+    #homeQuote{
+        font-size: 50px;
+    }
+    #homeSocialsContainer{
+       top: -720px;
+       left: 0px;
+       display: flex;
+       justify-content: space-around;
+       height: 100px;
+       width: 708px;
+    }
+    #btnContainer{
+        top: -745px;
+        left: 250px;
+    }
+}
