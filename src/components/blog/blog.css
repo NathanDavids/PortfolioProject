@@ -46,15 +46,12 @@
     display: flex;
     justify-content: center;
     position: relative;
-    left: -4%;
 }
 
 .postOne{
     position: relative;
     background-color: white;
     box-shadow: 10px 8px 15px rgba(217, 23, 31, 1);
-    width: 25%;
-    height: 90%;
     .postHeading{
         display: flex;
         justify-content: center;
@@ -85,11 +82,8 @@
 
 .postTwo{
     position: relative;
-    left: 3%;
     background-color: white;
     box-shadow: 10px 8px 15px rgba(217, 23, 31, 1);
-    width: 25%;
-    height: 90%;
     .postHeading{
         display: flex;
         justify-content: center;
@@ -118,11 +112,8 @@
 }
 .postThree{
     position: relative;
-    left: 6%;
     background-color: white;
     box-shadow: 10px 8px 15px rgba(217, 23, 31, 1);
-    width: 25%;
-    height: 90%;
     .postHeading{
         display: flex;
         justify-content: center;
@@ -157,25 +148,39 @@
         height: 240vh;
     }
     .blogImage{
-        height: 550PX;
-    }
-    .postOne{
-        margin-left: 20%;
-        height:80%;
+        height: 550px;
     }
     .postTwo{
-        margin-left: 17%;
-        height:80%;
+        height:400px;
     }
     .postThree{
-        margin-left: 14%;
-        height: 80%;
-        .readMore{
-            margin-left: 80px;
-        }
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    #blog{
+        height: 250vh;
+    }
+    #blogContainer{
+        height: 240vh;
+    }
+    .blogImage{
+        height: 550px;
+    }
+    .postOne{
+        height: 480px;
+    }
+    .postTwo{
+       
+        height:480px;
+    }
+    .postThree{
+       
+        height: 480px;
     }
     .readMore{
         margin-top: 50px;
-        margin-left: 10px;
+        margin-left: -14px;
     }
 }
