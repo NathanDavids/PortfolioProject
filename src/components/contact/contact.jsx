@@ -65,6 +65,10 @@ function contact() {
               <button id='sendBtn' className="inline-block self-center text-white font-bold rounded-lg px-6 py-2 uppercase text-sm hover:bg-[#D9171F]"> Send Message </button>
             </form>
           </div>
+          <div id='copyright' className='flex justify-center justify-between items-center'>
+            <h1 className='px-[35%]'>COPYRIGHT © NATHAN DAVIDS | 2023 </h1>
+            <a href="Home"><button id='backToTop'> ↑ </button></a>    
+          </div>
         </div>
       </div>
     </div>
