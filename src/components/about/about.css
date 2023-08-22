@@ -291,6 +291,15 @@
     overflow: hidden;
 }
 
+@media screen and (max-width:768px){
+    #about{
+        height: 230vh;
+    }
+    #aboutContainer{
+        height: 230vh;
+    }
+}
+
 @media screen and (min-width:1440px){
     #about{
         height: 160vh;
