@@ -12,14 +12,14 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: var(--BackgroundColour);
 }
 
 #homeContainer{
     margin-top: 5.6rem;
     width: 95%;
-    height: 90vh;
+    height: 800px;
     background-color: black;
 }
 
@@ -295,7 +295,7 @@
 /* Media Queries */ 
 
 
-@media screen and (min-width:768px) and (max-width:1024px){
+@media screen and (max-width:768px) and (max-width:1024px){
     #mainContainer{
         display: grid;
 
@@ -310,29 +310,29 @@
     
     .homeImg{
         position: relative;
-        top: 145px;
-        width: 600px;
-        height: 600px;
+        top: 210px;
+        width: 550px;
+        height: 550px;
     }
     #homeTextContainer{
-       width: 800px;
+       width: 450px;
        height: 150px;
        top: -790px;
-       left: 75px;
     }
     #homeQuote{
         font-size: 45px;
     }
     #homeSocialsContainer{
-       top: -780px;
-       left: 75px;
+       top: -750px;
+       left: 0px;
        display: flex;
        justify-content: space-around;
        height: 100px;
-       width: 800px;
+       width: 450px;
     }
     #btnContainer{
-        top: -770px;
-        left: 380px;
+        top: -765px;
+        left: 120px;
     }
 }
+
