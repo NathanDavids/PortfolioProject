@@ -209,3 +209,41 @@
     letter-spacing: 0.1em;
     text-align: center;
 }
+
+/* Media Queries */
+
+@media screen and (max-width:768px){
+    #skillsContainer{
+        width: 400px;
+        height: 400px;
+    }
+    #skillsContainer #symbol{
+        height: 100%;
+    }
+    #skillsContainer #symbol .imgBx{
+    width: 60px;
+    height: 60px;
+    transform-origin: 230px;
+    }
+    .content::before{
+        inset: 45px;
+    }
+    .content::after{
+        inset: 80px;
+    }
+    .contentBx{
+    width: 30%;
+    height: 40%;
+    }
+    .contentBx .card .imgBx{
+        width: 35px;
+        height: 35px;
+    }
+    .contentBx .card .textBx h2{
+    font-size: 0.7em;
+    }
+
+.contentBx .card .textBx h2 span{
+    font-size: 0.5em;
+    }
+}
