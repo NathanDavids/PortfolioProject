@@ -11,6 +11,12 @@ import CV from '../../assets/NathanDavids_CV.pdf'
 function home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode;
+    setIsDarkMode(newTheme);
+    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
+  };
+
   useEffect(() => {
     // Initialize Typed within the useEffect hook
     const typed = new Typed(".multiple-text", {
@@ -26,11 +32,6 @@ function home() {
       typed.destroy();
     };
   }, []); // Empty dependency array to run the effect only once
-
-  const toggleTheme = () => {
-    console.log("Toggling theme");
-    setIsDarkMode(prevMode => !prevMode);
-  };
 
   return (
     <>

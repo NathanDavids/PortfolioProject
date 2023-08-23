@@ -7,6 +7,22 @@
     --ButtonColor: rgba(225, 225, 225, 0.05);
 }
 
+#about.dark{
+    background-color: black;
+}
+#aboutContainer.dark{
+    background-color: black;
+}
+
+
+#about.light{
+    background-color: white;
+}
+#aboutContainer.light{
+    background-color: white;
+}
+
+
 #about{
     display: flex;
     justify-content: center;
@@ -14,21 +30,21 @@
     width: 100%;
     height: 250vh;
     overflow: hidden;
-    background-color: var(--BackgroundColour);
+    
 }
 
 #aboutContainer{
     margin-top: 0rem;
     width: 95%;
     height: 250vh;
-    background-color: var(--BackgroundColour);
+ 
 }
 
 #aboutTop{
     display: grid;
     align-items: center;
     width: 100%;
-    background-color: var(--BackgroundColour);
+   
     overflow: hidden;
 }
 
@@ -289,6 +305,10 @@
     border-radius: 50px;
     font-size: 70px;
     overflow: hidden;
+}
+
+.counter{
+    color: var(--SecondaryTextColour);
 }
 
 @media screen and (max-width:768px){

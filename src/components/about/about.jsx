@@ -1,14 +1,68 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import '../about/about.css'
+import '../home/home'
 import AboutPicture from '../../assets/AboutPicture.jpg'
 import {FaGreaterThan} from 'react-icons/fa'
 
 function about() {
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.getItem('theme') === 'dark'
+  );
+
+  useEffect(() => {
+    // Apply theme to your page's CSS classes based on isDarkMode
+    // For example, add 'dark' or 'light' class to the body element
+    document.body.classList.toggle('dark', isDarkMode);
+    document.body.classList.toggle('light', !isDarkMode);
+  }, [isDarkMode]);
+
+  const projects = document.querySelector('#projectsBlock');
+  const counter = document.querySelectorAll('.counter');
+  let bol = false; 
+
+  useEffect(() => {
+    const projects = document.querySelector('#projectsBlock');
+    const counter = document.querySelectorAll('.counter');
+    let bol = false;
+
+    const sectionOffset = projects.offsetTop + projects.offsetHeight;
+
+    const updateCount = () => {
+      counter.forEach((counter) => {
+        const target = +counter.getAttribute('data-target');
+        const speed = +counter.getAttribute('data-speed');
+        const count = +counter.innerText;
+
+        if (count < target) {
+          counter.innerText = count + 1;
+          setTimeout(updateCount, speed);
+        } else {
+          counter.innerText = target;
+        }
+      });
+    };
+
+    const handleScroll = () => {
+      const pageOffset = window.innerHeight + window.pageYOffset;
+      if (pageOffset > sectionOffset && !bol) {
+        updateCount();
+        bol = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   return (
     <>
-    <section id='about'>
-    <div id='aboutContainer'>
-      <div id="aboutTop">
+    <section id='about' className={isDarkMode ? 'dark' : 'light'}>
+    <div id='aboutContainer' className={isDarkMode ? 'dark' : 'light'}>
+      <div id="aboutTop" className={isDarkMode ? 'dark' : 'light'}>
         <div id='aboutHead'>
           <h1 id='aboutHeading'> About Me </h1>
           <hr id='aboutLine'/>
@@ -74,8 +128,8 @@ function about() {
         </div>
         <div id='workContent'>
           <div id='projectsBlock'>
-            <h1>00</h1>
-            <h1>Projects</h1>
+            <h1 className='counter' data-target='10' data-speed='500' >00</h1>
+            <h1 className='projectLabel'>Projects</h1>
           </div>
         </div>
       </div>

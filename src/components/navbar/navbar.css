@@ -1,4 +1,3 @@
-/* Dark Theme Colours */
 :root{
     --BackgroundColour: black;
     --PrimaryTextColour: #FFFFFF;
@@ -28,12 +27,17 @@
     opacity: 1; /* Show the border for the selected item */
   }
 
+#navBarSection.dark{
+    .header{
+        background-color: red;
+    }
+}
+
 .header{
     position: fixed; /* Sticky */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--BackgroundColour);
     width: 100%;
     padding: 1rem;
     z-index: 1000;
