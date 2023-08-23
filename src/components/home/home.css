@@ -208,34 +208,36 @@
     }
     
     #homeImgContainer{
+        top: -180px;
         height: 300px;
     }
     
     .homeImg{
         position: relative;
         top: 210px;
-        width: 550px;
-        height: 550px;
+        width: 480px;
+        height: 400px;
     }
     #homeTextContainer{
        width: 450px;
        height: 150px;
-       top: -790px;
+       top: -650px;
+       left: 20px;
     }
     #homeQuote{
-        font-size: 45px;
+        font-size: 40px;
     }
     #homeSocialsContainer{
-       top: -750px;
-       left: 0px;
+       top: -630px;
+       left: 20px;
        display: flex;
        justify-content: space-around;
        height: 100px;
        width: 450px;
     }
     #btnContainer{
-        top: -765px;
-        left: 120px;
+        top: -650px;
+        left: 140px;
     }
 }
 
@@ -250,33 +252,35 @@
     
     #homeImgContainer{
         height: 300px;
+        top: -190px;
     }
     
     .homeImg{
         position: relative;
         top: 225px;
-        width: 550px;
-        height: 550px;
+        width: 500px;
+        height: 440px;
     }
     #homeTextContainer{
        width: 708px;
        height: 150px;
-       top: -790px;
+       top: -650px;
+       left: 130px;
     }
     #homeQuote{
-        font-size: 50px;
+        font-size: 45px;
     }
     #homeSocialsContainer{
-       top: -720px;
-       left: 0px;
+       top: -670px;
+       left: 130px;
        display: flex;
        justify-content: space-around;
        height: 100px;
        width: 708px;
     }
     #btnContainer{
-        top: -745px;
-        left: 250px;
+        top: -670px;
+        left: 380px;
     }
 }
 
