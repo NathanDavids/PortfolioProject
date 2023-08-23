@@ -1,4 +1,3 @@
-/* Dark Theme Colours */
 :root{
     --BackgroundColour: black;
     --PrimaryTextColour: #FFFFFF;
@@ -6,6 +5,67 @@
     --BoxShadow: 0 2px 4px rgba(217, 23, 31, 1);
 }
 
+/* Dark Mode */
+#home.dark{
+    background-color: black;
+}
+
+#mainContainer.dark{
+    background-color: black;
+}
+
+#homeContainer.dark{
+    background-color: black;
+}
+
+#home.dark{
+    #homeContainer{
+        #homeTextContainer{
+            color: white;
+        }
+    }
+}
+
+/* Light Mode */
+#home.light{
+    background-color: white;
+}
+
+#mainContainer.light{
+    background-color: white;
+}
+
+#homeContainer.light{
+    background-color: white;
+}
+
+#home.light{
+    #homeContainer{
+        #mainContainer{
+            #nameContainer{
+                color: black;
+            }
+        }
+    }
+}
+
+#home.light{
+    #homeContainer{
+        #homeTextContainer{
+            color: black;
+        }
+        #homeSocialsContainer{
+            color: black;
+        }
+        #downloadBtn{
+            color: white;
+            background-color: black;
+        }
+    }
+}
+
+
+/* Main CSS */
 
 #home{
     display: flex;
@@ -13,15 +73,15 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: var(--BackgroundColour);
+ 
 }
 
 #homeContainer{
     margin-top: 5.6rem;
     width: 95%;
     height: 800px;
-    background-color: black;
 }
+
 
 #mainContainer{
     display: block;
@@ -31,7 +91,6 @@
     width: 100%;
     height: 100%;
     left: 50%;
-    background-color: var(--BackgroundColour);
     overflow: hidden;
 }
 
@@ -44,7 +103,6 @@
     top: 70px;
     width: 100%;
     height: auto;
-    background-color: transparent;
     color: white;
     font-size: 150px;
     flex-wrap: wrap;

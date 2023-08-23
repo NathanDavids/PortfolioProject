@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../home/home.css'
 import Typed from 'typed.js'; // Import the Typed library
 import HomePicture from '../../assets/HomePicture.png'
@@ -9,6 +9,8 @@ import { MdLightMode } from 'react-icons/md'
 import CV from '../../assets/NathanDavids_CV.pdf'
 
 function home() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   useEffect(() => {
     // Initialize Typed within the useEffect hook
     const typed = new Typed(".multiple-text", {
@@ -25,13 +27,18 @@ function home() {
     };
   }, []); // Empty dependency array to run the effect only once
 
+  const toggleTheme = () => {
+    console.log("Toggling theme");
+    setIsDarkMode(prevMode => !prevMode);
+  };
+
   return (
     <>
-    <section id='home'>
+    <section id='home' className={isDarkMode ? 'dark' : 'light'}>
       <div id='homeContainer'>
         <div id='mainContainer'>
           <div id='nameContainer'>
-            <h1>Nathan <span className='surnameText'>Davids</span> Nathan <span className='surnameText'> Davids </span>
+            <h1 className='name'>Nathan <span className='surnameText'>Davids</span> Nathan <span className='surnameText'> Davids </span>
             Nathan <span className='surnameText'>Davids </span> Nathan <span className='surnameText'> Davids </span> Nathan 
             <span className='surnameText'>Davids</span>
             </h1>         
@@ -49,7 +56,7 @@ function home() {
           <a href="https://www.linkedin.com/in/nathan-davids-7a857b233/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='icon'/></a>
           <a href="https://github.com/NathanDavids" target="_blank" rel="noopener noreferrer"><BsGithub className='icon'/></a>
           <a href="https://wa.link/38j3gp" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp className='icon'/></a>
-          <MdLightMode className='icon'/>
+          <button className={`icon button ${isDarkMode ? 'dark' : 'light'}`} onClick={toggleTheme}><MdLightMode/> </button>
         </div>
         <div id='btnContainer'>
           <a href={CV} target="_blank" rel="noopener noreferrer"><button id='downloadBtn' >Download CV</button></a>
