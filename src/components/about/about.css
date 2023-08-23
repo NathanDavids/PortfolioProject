@@ -111,9 +111,18 @@
     font-size: 3rem;
     color: var(--PrimaryTextColour);
 }
+
+#headingRed{
+    color: var(--SecondaryTextColour);
+}
+
 #subHeading{
     font-size: 1.2rem;
     color: var(--PrimaryTextColour);
+}
+
+#arrow{
+    color: var(--SecondaryTextColour);
 }
 
 #keyTop{

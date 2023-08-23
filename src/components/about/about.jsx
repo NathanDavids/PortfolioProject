@@ -72,16 +72,16 @@ function about() {
             <img src={AboutPicture} alt="" id='aboutImg'/>
           </div>
           <div id='textContainer'>
-            <h1 id='Heading'>FULL-STACK DEVELOPER</h1>
+            <h1 id='Heading'>FULL-STACK <span id='headingRed'> DEVELOPER </span></h1>
             <br />
             <h2 id='subHeading'> Hi there, I'm Nathan Davids, a passionate software developer with a love for coding and creating elegant, efficient solutions. </h2>
             <br />
             <div id='keyTop'>
-            <h2 id='key1'> > Age: 23 </h2>  
-            <h2 id='key2'> > City: Cape Town, South Africa </h2>      
+            <h2 id='key1'> <span id='arrow'> > </span> Age: 23 </h2>  
+            <h2 id='key2'> <span id='arrow'> > </span> City: Cape Town, South Africa </h2>      
             </div>
             <div id='keyBottom'>
-              <h2><h2 id='key3'> > Occupation: Junior Software Developer </h2></h2>
+              <h2><h2 id='key3'> <span id='arrow'> > </span> Occupation: Junior Software Developer </h2></h2>
             </div>
             <br />
             <div id='bodyText'>
