@@ -38,7 +38,8 @@ function projects() {
     <section id='projects'>
     <div id='projectsContainer' className='flex h-full w-full items-center justify-center'>
       <div className='w-[1200px] max-w-full h-full max-h-full'>
-        <ul className='group flex flex-col mt-20 md:h-[640px] md:flex-row md:gap-[1.5%]'>
+        <h1 className='flex justify-center font-bold text-8xl w-full text-center'>Projects</h1>
+        <ul className='group flex flex-col mt-10 md:h-[640px] md:flex-row md:gap-[1.5%]'>
           {List.map((Lists, index) => (
            <li id='contentContainer'
            onClick={() => setActiveItem(index)}
