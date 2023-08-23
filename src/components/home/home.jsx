@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import '../home/home.css'
+import Typed from 'typed.js'; // Import the Typed library
 import HomePicture from '../../assets/HomePicture.png'
 import { BsLinkedin } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import { MdLightMode } from 'react-icons/md'
+import CV from '../../assets/NathanDavids_CV.pdf'
 
 function home() {
+  useEffect(() => {
+    // Initialize Typed within the useEffect hook
+    const typed = new Typed(".multiple-text", {
+      strings: ["Doesn't Work Hard"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1000,
+      loop: true,
+    });
+
+    // Clean up the Typed instance when the component unmounts
+    return () => {
+      typed.destroy();
+    };
+  }, []); // Empty dependency array to run the effect only once
+
   return (
     <>
     <section id='home'>
@@ -24,7 +42,7 @@ function home() {
         </div>
         <div id='homeTextContainer'>
           <h1 id='homeQuote'>
-          "Hard Work Beats Talent When Talent <span className='quoteRed'> Doesn't Work Hard"</span>
+          "Hard Work Beats Talent When Talent <span className='multiple-text'> Doesn't Work Hard"</span>
           </h1>
         </div>
         <div id='homeSocialsContainer'>
@@ -34,7 +52,7 @@ function home() {
           <MdLightMode className='icon'/>
         </div>
         <div id='btnContainer'>
-          <button id='downloadBtn' >Download CV</button>
+          <a href={CV} target="_blank" rel="noopener noreferrer"><button id='downloadBtn' >Download CV</button></a>
           </div>
       </div>
     </section>
