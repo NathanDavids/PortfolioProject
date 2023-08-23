@@ -48,7 +48,7 @@
     position: relative;
 }
 
-.postOne{
+.postContainer{
     position: relative;
     background-color: white;
     box-shadow: 10px 8px 15px rgba(217, 23, 31, 1);
@@ -71,67 +71,6 @@
         height: 55px;
         position: relative;
         left: 100px;
-        color: var(--PrimaryTextColour);
-        background-color: var(--BackgroundColour);
-        border-radius: 20px;
-        font-size: 20px;
-        font-weight: 600;
-    }
-}
-
-
-.postTwo{
-    position: relative;
-    background-color: white;
-    box-shadow: 10px 8px 15px rgba(217, 23, 31, 1);
-    .postHeading{
-        display: flex;
-        justify-content: center;
-        font-size: 40px
-    }
-    .postText{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-size: 21px;
-    }
-    .readMore{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-        height: 55px;
-        position: relative;
-        left: 100px;
-        color: var(--PrimaryTextColour);
-        background-color: var(--BackgroundColour);
-        border-radius: 20px;
-        font-size: 20px;
-        font-weight: 600;
-    }
-}
-.postThree{
-    position: relative;
-    background-color: white;
-    box-shadow: 10px 8px 15px rgba(217, 23, 31, 1);
-    .postHeading{
-        display: flex;
-        justify-content: center;
-        font-size: 40px
-    }
-    .postText{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-size: 21px;
-    }
-    .readMore{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-        height: 55px;
-        margin-left: 100px;
         color: var(--PrimaryTextColour);
         background-color: var(--BackgroundColour);
         border-radius: 20px;
