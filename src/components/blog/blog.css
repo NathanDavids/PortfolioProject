@@ -1,16 +1,33 @@
+/* Light Mode  */
+#blog.light{
+    background-color: #E3E6F3;
+}
+#blogContainer.light{
+    background-color: #E3E6F3;
+}
+.blogPostContainer.light{
+    background-color: #E3E6F3;
+}
+.postContainer.light{
+    background-color: rgba(181, 184, 194, 0.8);
+    box-shadow: 10px 8px 10px rgba(217, 23, 31, 1);
+}
+
+
+/* Main CSS */
 #blog{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 1000px;
     background-color: black;
 }
 
 #blogContainer{
     margin-top: 5.6rem;
     width: 95%;
-    height: 90vh;
+    height: 900px;
     background-color: black;
 }
 
@@ -55,7 +72,7 @@
     .postHeading{
         display: flex;
         justify-content: center;
-        font-size: 40px
+        font-size: 40px;
     }
     .postText{
         display: flex;
@@ -80,7 +97,7 @@
 }
 
 .expandedHeading{
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 600;
 }
 
