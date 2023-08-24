@@ -413,10 +413,10 @@
 
 @media screen and (max-width:768px){
     #about{
-        height: 2100px;
+        height: 2300px;
     }
     #aboutContainer{
-        height: 1750px;
+        height: 1950px;
     }
 }
 
@@ -431,9 +431,9 @@
 
 @media screen and (min-width:1024px) and (max-width:1280px){
     #about{
-        height: 1500px;
+        height: 1800px;
     }
     #aboutContainer{
-        height: 1300px;
+        height: 1500px;
     }
 }

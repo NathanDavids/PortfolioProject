@@ -1,9 +1,29 @@
+/* Light Mode */
+
+#educationandexperience.light{
+    background-color: #E3E6F3;
+}
+#educationandexperienceContainer.light{
+    background-color: #E3E6F3;
+}
+#educationHeading.light{
+    color: black;
+}
+#scrollBar.light{
+    background-color: black;
+}
+#educationText.light{
+    color: black;
+}
+
+/* Main CSS */
+
 #educationandexperience{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 120vh;
+    height: 1500px;
     background-color: black;
 }
 
@@ -11,14 +31,9 @@
     background-color: black;
 }
 
-#educationandexperience.light{
-    background-color: white;
-}
-
 #educationandexperienceContainer{
-    margin-top: 5.6rem;
     width: 95%;
-    height: 120vh;
+    height: 1300px;
     background-color: black;
     color: white;
     overflow: hidden;
@@ -28,27 +43,28 @@
 
 @media screen and (max-width:768px){
     #educationandexperience{
-        height: 260vh;
+        height: 2600px;
     }
     #educationandexperienceContainer{
-        height: 250vh;
+        height: 2400px;
     }
 }
 
-@media screen and (max-width:1024px){
+@media screen and (min-width:768px) and (max-width:1024px){
     #educationandexperience{
-        height: 120vh;
+        height: 1900px;
     }
     #educationandexperienceContainer{
-        height: 250vh;
+        height: 1700px;
     }
 }
 
-@media screen and (max-width:1600px){
+
+@media screen and (min-width:1024px) and (max-width:1600px){
     #educationandexperience{
-        height: 200vh;
+      height: 1550px;
     }
     #educationandexperienceContainer{
-        height: 150vh;
+      height: 1500px;
     }
 }
