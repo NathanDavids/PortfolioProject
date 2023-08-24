@@ -5,6 +5,28 @@
   --BoxShadow: 0 2px 4px rgba(217, 23, 31, 1);
 }
 
+/* Light Mode */
+#projects.light{
+  background-color: #E3E6F3;
+}
+
+#projectsContainer.light{
+  background-color: #E3E6F3;
+}
+
+#projectsHeading{
+  color: black;
+}
+
+#listBox.light{
+  background-color: black;
+}
+
+#contentContainer.light{
+  color: black;
+}
+/* Main CSS */
+
 #projects{
   display: flex;
   justify-content: center;

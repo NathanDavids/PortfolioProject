@@ -5,6 +5,7 @@ import About from '../about/about'
 import EducationAndExperience from '../education & experience/educationandexperience'
 import Experience from '../experience/experience';
 import Skills from '../skills/skills';
+import Projects from '../projects/projects';
 import Typed from 'typed.js'; // Import the Typed library
 import HomePicture from '../../assets/HomePicture.png'
 import { BsLinkedin } from 'react-icons/bs'
@@ -74,6 +75,7 @@ function home() {
     <EducationAndExperience isDarkMode={isDarkMode} />
     <Experience isDarkMode={isDarkMode} />
     <Skills isDarkMode={isDarkMode}/>
+    <Projects isDarkMode={isDarkMode}/>
     </>
   )
 }
