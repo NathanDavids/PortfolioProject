@@ -15,7 +15,6 @@ function App() {
     <>
     <Navbar/>
     <Home/>
-    <Skills/>
     <Projects/>
     <Blog/>
     <Contact/>

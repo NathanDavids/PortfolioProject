@@ -9,7 +9,7 @@ import VisualStudio from '../../assets/visualstudio.png'
 import Github from '../../assets/github.png'
 import JS from '../../assets/javascript.png'
 
-function skills() {
+function skills({ isDarkMode }) {
     useEffect(() => {
         let imgBx = document.querySelectorAll('.imgBx');
         let contentBx = document.querySelectorAll('.contentBx');
@@ -33,31 +33,31 @@ function skills() {
   
   return (
     <>
-    <section id='skills' className='flex justify-center items-center h-screen bg-black'>
-      <div id='skillsContainer' className='relative w-72 h-72 sm:w-96 sm:h-96 border-2 border-white rounded-full shadow-2xl'>
+    <section id='skills' className={`flex justify-center items-center h-screen ${isDarkMode ? 'dark' : 'light'}`}>
+      <div id='skillsContainer' className={`relative w-72 h-72 sm:w-96 sm:h-96 border-2 border-white rounded-full shadow-2xl ${isDarkMode ? 'dark' : 'light'}`}>
           <div id='symbol' className='absolute left-0 w-full h-full flex justify-center items-center cursor-pointer'>
-              <div className='imgBx active' style={{ '--i': 1}} data-id='content1'>
+              <div className={`imgBx ${isDarkMode ? 'dark' : 'light'} active`} style={{ '--i': 1}} data-id='content1'>
                 <img src={HTML}/>
               </div>
-              <div className='imgBx' style={{ '--i': 2}} data-id='content2'>
+              <div className={`imgBx ${isDarkMode ? 'dark' : 'light'}`} style={{ '--i': 2}} data-id='content2'>
                 <img src={CSS}/>
             </div>
-            <div className='imgBx' style={{ '--i': 3}} data-id='content3'>
+            <div className={`imgBx ${isDarkMode ? 'dark' : 'light'}`} style={{ '--i': 3}} data-id='content3'>
                 <img src={LogoReact}/>
             </div>
-            <div className='imgBx' style={{ '--i': 4}} data-id='content4'>
+            <div className={`imgBx ${isDarkMode ? 'dark' : 'light'}`} style={{ '--i': 4}} data-id='content4'>
                 <img src={Python}/>
             </div>
-            <div className='imgBx' style={{ '--i': 5}} data-id='content5'>
+            <div className={`imgBx ${isDarkMode ? 'dark' : 'light'}`} style={{ '--i': 5}} data-id='content5'>
                 <img src={Java}/>
             </div>
-            <div className='imgBx' style={{ '--i': 6}} data-id='content6'>
+            <div className={`imgBx ${isDarkMode ? 'dark' : 'light'}`} style={{ '--i': 6}} data-id='content6'>
                 <img src={VisualStudio}/>
             </div>
-            <div className='imgBx' style={{ '--i': 7}} data-id='content7'>
+            <div className={`imgBx ${isDarkMode ? 'dark' : 'light'}`} style={{ '--i': 7}} data-id='content7'>
                 <img src={Github}/>
             </div>
-            <div className='imgBx' style={{ '--i': 8}} data-id='content8'>
+            <div className={`imgBx ${isDarkMode ? 'dark' : 'light'}`} style={{ '--i': 8}} data-id='content8'>
                 <img src={JS}/>
             </div>
           </div>
