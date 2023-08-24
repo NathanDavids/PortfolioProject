@@ -101,30 +101,12 @@
     font-weight: 600;
 }
 
-@media screen and (max-width:768px){
-    #blog{
-        height: 250vh;
-    }
-    #blogContainer{
-        height: 240vh;
-    }
-    .blogImage{
-        height: 550px;
-    }
-    .postTwo{
-        height:400px;
-    }
-    .postThree{
-        height: 400px;
-    }
-}
-
 @media screen and (max-width:1024px){
     #blog{
-        height: 250vh;
+        height: 2000px;
     }
     #blogContainer{
-        height: 240vh;
+        height: 1900px;
     }
     .blogImage{
         height: 550px;

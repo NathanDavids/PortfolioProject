@@ -29,12 +29,12 @@ function Blog({ isDarkMode }) {
             ].map((post, index) => (
               <div
                 key={index}
-                className={`postContainer items-center w-[70%] h-[70%] md:w-1/1 md:h-[32%] lg:w-1/4 lg:h-[75%] xl:w-1/4 bg-white rounded-lg p-4 flex flex-col space-y-3 ${expandedPosts[index] ? 'expanded' : ''} ${isDarkMode ? 'dark' : 'light'}`}
+                className={`postContainer overflow-hidden items-center w-[70%] h-[90%] md:w-1/1 md:h-[40%] lg:w-1/4 lg:h-[75%] xl:w-1/4 bg-white rounded-lg p-4 flex flex-col space-y-3 ${expandedPosts[index] ? 'expanded' : ''} ${isDarkMode ? 'dark' : 'light'}`}
               >
                 {expandedPosts[index] ? (
                   <>
                     {/* Expanded content */}
-                    <h2 className='expandedHeading'>{post.heading}</h2>
+                    <h2 className='expandedHeading text-center'>{post.heading}</h2>
                     <p>
                       {/* Add additional text or components specific to this post */}
                       {/* For example: */}
