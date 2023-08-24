@@ -7,6 +7,14 @@
     background-color: black;
 }
 
+#educationandexperience.dark{
+    background-color: black;
+}
+
+#educationandexperience.light{
+    background-color: white;
+}
+
 #educationandexperienceContainer{
     margin-top: 5.6rem;
     width: 95%;

@@ -24,7 +24,7 @@ const Details = ({position, company, time, address, work}) => {
   )
 }
 
-const educationandexperience = () => {
+const educationandexperience = ({ isDarkMode }) => {
   const ref = useRef(null);
     const {scrollYProgress} = useScroll(
         {
@@ -34,7 +34,7 @@ const educationandexperience = () => {
     )
   return (
     <>
-    <section id='educationandexperience' className='bg-white'>
+    <section id='educationandexperience' className={`${isDarkMode ? 'dark' : 'light'}`}>
     <div id='educationandexperienceContainer'>
         <h2 className='font-bold text-8xl mb-20 w-full text-center'>
             Education

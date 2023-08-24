@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../home/home.css'
+import '../about/about'
+import About from '../about/about'
+import EducationAndExperience from '../education & experience/educationandexperience'
 import Typed from 'typed.js'; // Import the Typed library
 import HomePicture from '../../assets/HomePicture.png'
 import { BsLinkedin } from 'react-icons/bs'
@@ -9,12 +12,13 @@ import { MdLightMode } from 'react-icons/md'
 import CV from '../../assets/NathanDavids_CV.pdf'
 
 function home() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('theme') === 'dark');
 
-  const toggleTheme = () => {
-    const newTheme = !isDarkMode;
-    setIsDarkMode(newTheme);
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
+  const toggleDarkMode = () => {
+    const newTheme = isDarkMode ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
+    setIsDarkMode(newTheme === 'dark');
+    // You might also want to emit an event or use a context to inform other components about the theme change.
   };
 
   useEffect(() => {
@@ -57,13 +61,15 @@ function home() {
           <a href="https://www.linkedin.com/in/nathan-davids-7a857b233/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='icon'/></a>
           <a href="https://github.com/NathanDavids" target="_blank" rel="noopener noreferrer"><BsGithub className='icon'/></a>
           <a href="https://wa.link/38j3gp" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp className='icon'/></a>
-          <button className={`icon button ${isDarkMode ? 'dark' : 'light'}`} onClick={toggleTheme}><MdLightMode/> </button>
+          <button onClick={toggleDarkMode}><MdLightMode/> </button>
         </div>
         <div id='btnContainer'>
           <a href={CV} target="_blank" rel="noopener noreferrer"><button id='downloadBtn' >Download CV</button></a>
           </div>
       </div>
     </section>
+    <About isDarkMode={isDarkMode} />
+    <EducationAndExperience isDarkMode={isDarkMode} />
     </>
   )
 }

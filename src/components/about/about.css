@@ -7,21 +7,112 @@
     --ButtonColor: rgba(225, 225, 225, 0.05);
 }
 
-#about.dark{
-    background-color: black;
-}
-#aboutContainer.dark{
-    background-color: black;
-}
-
-
+/* Light Mode */
 #about.light{
-    background-color: white;
+    background-color: #E3E6F3;
 }
 #aboutContainer.light{
-    background-color: white;
+    background-color: #E3E6F3;
+}
+#aboutTop.light{
+    background-color: w#E3E6F3;
+}
+#aboutHead.light{
+    background-color: #E3E6F3;
+}
+#aboutLine.light{
+    border-color: black;
+}
+#aboutTopContent.light{
+    background-color: rgba(181, 184, 194, 0.8);
+    box-shadow: 6px 3px 5px rgba(217, 23, 31, 1);
+}
+#imgContainer.light{
+    box-shadow: 5px 5px 6px rgba(217, 23, 31, 1);
+}
+#textContainer.light{
+    color: black;
+}
+#Heading.light{
+    color: black;
+}
+#subHeading.light{
+    color: black;
+}
+#keyTop.light{
+    color: black;
+}
+#keyBottom.light{
+    color: black;
+}
+#bodyText.light{
+    color: black;
+}
+#interestHead.light{
+    background-color: #E3E6F3;
+}
+#aboutHeading.light{
+    background-color: #E3E6F3;
+}
+#aboutBottomContent.light{
+    background-color: #E3E6F3;
+}
+#topRow.light{
+    background-color: #E3E6F3;
+}
+#sports.light{
+    background-color: rgba(181, 184, 194, 0.8);
+    color: black;
+    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+}
+#gaming.light{
+    background-color: rgba(181, 184, 194, 0.8);
+    color: black;
+    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+}
+#gaming.light{
+    background-color: rgba(181, 184, 194, 0.8);
+    color: black;
+    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+}
+#webDev.light{
+    background-color: rgba(181, 184, 194, 0.8);
+    color: black;
+    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+}
+#appDev.light{
+    background-color: rgba(181, 184, 194, 0.8);
+    color: black;
+    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+}
+#cyber.light{
+    background-color: rgba(181, 184, 194, 0.8);
+    color: black;
+    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+}
+#ai.light{
+    background-color: rgba(181, 184, 194, 0.8);
+    color: black;
+    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+}
+#workHead.light{
+    background-color: #E3E6F3;
 }
 
+#workLine1.light{
+    border-color: black;
+}
+
+#workLine2.light{
+    border-color: black;
+}
+#projectsBlock.light{
+    background-color: rgba(181, 184, 194, 0.8);
+    color: black;
+    box-shadow: 0 4px 2.5px rgba(217, 23, 31, 1);
+}
+
+/* Main CSS*/
 
 #about{
     display: flex;
@@ -31,7 +122,6 @@
     height: 1600px;
     overflow: hidden;
     background-color: black;
-    
 }
 
 #aboutContainer{
@@ -159,7 +249,7 @@
 }
 
 #interestHead{
-    background-color: var(--BackgroundColour);
+   
     height: 50px;
     width: 100%;
 }
