@@ -24,7 +24,7 @@ const Details = ({position, company, time, address, work}) => {
   )
 }
 
-const experience = () => {
+const experience = ({ isDarkMode }) => {
   const ref = useRef(null);
     const {scrollYProgress} = useScroll(
         {
@@ -34,16 +34,16 @@ const experience = () => {
     )
   return (
     <>
-    <section id='experience' className='bg-white'>
-    <div id='experienceContainer'>
-        <h2 className='font-bold text-8xl mb-20 w-full text-center'>
+    <section id='experience' className={isDarkMode ? 'dark' : 'light'}>
+    <div id='experienceContainer' className={isDarkMode ? 'dark' : 'light'}>
+        <h2 id='experienceHeading' className={`font-bold text-8xl mb-20 w-full text-center ${isDarkMode ? 'dark' : 'light'}`}>
             Experience
         </h2>
         <div ref={ref} className='w-[75%] mx-auto relative'>
 
-        <motion.div style={{scaleY: scrollYProgress}} className='absolute left-9 top-1 w-[4px] h-full bg-white origin-top'/>
+        <motion.div style={{scaleY: scrollYProgress}} id='scrollBar' className={`absolute left-9 top-1 w-[4px] h-full bg-white origin-top ${isDarkMode ? 'dark' : 'light'}`}/>
 
-          <ul className='w-full flex flex-col items-start justify-between ml-4'>
+          <ul id='educationText' className={`w-full flex flex-col items-start justify-between ml-4 ${isDarkMode ? 'dark' : 'light'}`}>
                 <Details
                 position="PABX Technician Intern" company="Innovo Networks"
                 time="2022 - 2023" address="century city, cape town"

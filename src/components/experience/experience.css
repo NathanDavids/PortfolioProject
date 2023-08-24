@@ -1,3 +1,21 @@
+/* Light Mode */
+#experience.light{
+    background-color: #E3E6F3;
+}
+#experienceContainer.light{
+    background-color: #E3E6F3;
+}
+#experienceHeading.light{
+    color: black;
+}
+#scrollBar.light{
+    background-color: black;
+}
+#educationText.light{
+    color: black;
+}
+
+/* Main CSS*/
 #experience{
     display: flex;
     justify-content: center;
