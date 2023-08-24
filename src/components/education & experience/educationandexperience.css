@@ -43,28 +43,28 @@
 
 @media screen and (max-width:768px){
     #educationandexperience{
-        height: 2600px;
+        height: 2300px;
     }
     #educationandexperienceContainer{
-        height: 2400px;
+        height: 2200px;
     }
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){
     #educationandexperience{
-        height: 1900px;
+        height: 1700px;
     }
     #educationandexperienceContainer{
-        height: 1700px;
+        height: 1400px;
     }
 }
 
 
 @media screen and (min-width:1024px) and (max-width:1600px){
     #educationandexperience{
-      height: 1550px;
+      height: 1050px;
     }
     #educationandexperienceContainer{
-      height: 1500px;
+      height: 1200px;
     }
 }
