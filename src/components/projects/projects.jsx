@@ -39,7 +39,7 @@ function projects({ isDarkMode }) {
     <div id='projectsContainer' className={`flex h-full w-full items-center justify-center ${isDarkMode ? 'dark' : 'light'}`}>
       <div className='w-[1200px] max-w-full h-full max-h-full'>
         <h1 id='projectsHeading' className={`flex justify-center font-bold text-8xl w-full text-center ${isDarkMode ? 'dark' : 'light'}`}>Projects</h1>
-        <ul className='group flex flex-col mt-10 md:h-[640px] md:flex-row md:gap-[1.5%]'>
+        <ul className={`group flex flex-col mt-10 md:h-[640px] md:flex-row md:gap-[1.5%] ${isDarkMode ? 'dark' : 'light'}`}>
           {List.map((Lists, index) => (
            <li id='contentContainer'
            onClick={() => setActiveItem(index)}
@@ -47,7 +47,7 @@ function projects({ isDarkMode }) {
            className={`relative md:w-[12%] md:[transition:width_var(--transition,200ms_ease-in)] md:hover:w-[12%] md:[&:not(:hover), &:not(:first),&:not(:last)]:group-hover:w-[7%] overflow-hidden [&[aria-current="true"]]:w-[60%] before:hidden md:before-block before:bg-red-300 before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] before:absolute ${activeItem === index ? 'active' : ''} ${isDarkMode ? 'dark' : 'light'}`}
            key={Lists.name}
          >
-           <div className={`listBox relative h-[125px] md:h-[99%] w-[90%] overflow-hidden rounded-4xl mb-4 ${isDarkMode ? 'dark' : 'light'}`}>
+           <div className={`listBox relative h-[125px] md:h-[99%] w-[95%] overflow-hidden rounded-4xl mb-4 ${isDarkMode ? 'dark' : 'light'}`}>
              <img id='websiteImg'
                className={`absolute right-0 max-w-none h-auto w-[150px] md:h-[640px] md:w-[800px] left-1/2 top-1/2 md:-translate-x-1/2 -translate-y-1/2 object-cover grayscale ${
                  activeItem === index ? 'opacity-1' : 'opacity-0'
@@ -57,8 +57,8 @@ function projects({ isDarkMode }) {
                width={800}
                height={640}
              />
-              <div id='projectName'>
-                <h1 id='number'>{Lists.number}</h1>
+              <div id='projectName' className={isDarkMode ? 'dark' : 'light'}>
+                <h1 id='number'className={isDarkMode ? 'dark' : 'light'} >{Lists.number}</h1>
                 <h1><span className='letter'>{Lists.displayName1}</span></h1>
                 <h1 id='letter'><span className='letter'>{Lists.displayName2}</span></h1>
                 <h1 id='letter'><span className='letter'>{Lists.displayName3}</span></h1>
