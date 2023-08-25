@@ -170,7 +170,7 @@
     height: 100px;
     position: relative;
     top: -890px;
-    left: 1150px;
+    left: 500px;
 }
 
 #downloadBtn{
@@ -320,10 +320,10 @@
         font-size: 55px;
     }
     #homeSocialsContainer{
-        left: 1050px;
+        left: 1000px;
     }
     #btnContainer{
-    left: 1050px;
+    left: 1000px;
     }
 }
 
