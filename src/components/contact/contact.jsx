@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../contact/contact.css'
 import {FaMapMarkedAlt} from 'react-icons/fa'
 import {MdEmail} from 'react-icons/md'
@@ -7,8 +7,37 @@ import {BsLinkedin} from 'react-icons/bs'
 import {BsWhatsapp} from 'react-icons/bs'
 import {BsGithub} from 'react-icons/bs'
 import {BsInstagram} from 'react-icons/bs'
+import { data } from 'autoprefixer'
 
 function contact({ isDarkMode }) {
+  const [userData, setUserData] = useState({
+    name: '', email: '', number: '', message: ''
+  }
+  )
+  let name, value
+  const dataa = (e) =>
+  {
+    name = e.target.name
+    value = e.target.value
+    setUserData({...userData, [name]:value})
+  }
+  const send = async (e) =>
+  {
+    const {name, email, number, message} = userData
+    e.preventDefault()
+    const option = {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        name, email, subject, message
+      })
+    }
+    const res = await fetch('https://portfolio-nathan-default-rtdb.firebaseio.com/Messages.json', option)
+    console.log(res)
+  }
+
   return (
     <>
     <section id='contact' className={isDarkMode ? 'dark' : 'light'}>
@@ -45,24 +74,30 @@ function contact({ isDarkMode }) {
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><BsInstagram/></a>
           </div>
           <div id='inputContainer' className={`bg-black rounded-xl shadow-lg p-8 ${isDarkMode ? 'dark' : 'light'}`}>
-            <form action="" className="flex flex-col space-y-4">
+            <form method='POST' className="flex flex-col space-y-4">
               <div>
                 <label htmlFor="" className="text-sm"> Name </label>
-                <input type="text" placeholder="Name" className="text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600" />
+                <input type="text" placeholder="Name" name="name" value={userData.name} onChange={data} className="text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600" />
               </div>
               <div>
                 <label htmlFor="" className="text-sm"> Email </label>
-                <input type="email" placeholder="Email" className="text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600" />
+                <input type="email" placeholder="Email" name="email" value={userData.email} onChange={data} className="text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600" />
               </div>
               <div>
                 <label htmlFor="" className="text-sm"> Phone Number </label>
-                <input type="number" placeholder="Phone Number" className="text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600" />
+                <input type="number" placeholder="Phone Number" name="number" value={userData.number} onChange={data} className="text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600" />
               </div>
               <div>
                 <label htmlFor="" className="text-sm"> Message </label>
-                <textarea type="text" placeholder="Message" rows="4" className="text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600" />
+                <textarea type="text" placeholder="Message" name="message" value={userData.message} onChange={data} rows="4" className="text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600" />
               </div>
-              <button id='sendBtn' className={`inline-block self-center text-white font-bold rounded-lg px-6 py-2 uppercase text-sm hover:bg-[#D9171F] ${isDarkMode ? 'dark' : 'light'}`}> Send Message </button>
+              <button
+                id='sendBtn'
+                onClick={send}
+                className={`inline-block self-center text-white font-bold rounded-lg px-6 py-2 uppercase text-sm hover:bg-[#D9171F] ${isDarkMode ? 'dark' : 'light'}`}
+              >
+                Send Message
+              </button>
             </form>
           </div>
           <div id='copyright' className={`flex justify-center justify-between items-center ${isDarkMode ? 'dark' : 'light'}`}>
