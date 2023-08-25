@@ -68,13 +68,11 @@
     .logo{
         width: 40px;
         height: 40px;
-        background-color: green;
-        background-image: url('../../assets/Logo_Dark.png');
         cursor: pointer;
         align-items: center;
         justify-content: center;
         position: relative;
-        
+
         .icon{
             font-size: 25px;
             color: var(--PrimaryTextColour);
