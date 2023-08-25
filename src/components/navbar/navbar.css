@@ -5,6 +5,32 @@
     --BoxShadow: 0 2px 4px rgba(217, 23, 31, 1);
 }
 
+/* Light Mode */
+.header.light{
+    background-color: #83838F;
+    box-shadow: 0 2px 4px rgba(217, 23, 31, 1);
+}
+
+.navItem{
+    color: black;
+}
+
+.header.light{
+    .navBar{
+        .navLists{
+            .navItem{
+                .navLink{
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Main CSS */
+
 .navItem {
     position: relative; /* Add this for positioning the pseudo-element */
   }
@@ -27,11 +53,6 @@
     opacity: 1; /* Show the border for the selected item */
   }
 
-#navBarSection.dark{
-    .header{
-        background-color: red;
-    }
-}
 
 .header{
     position: fixed; /* Sticky */
@@ -41,15 +62,19 @@
     width: 100%;
     padding: 1rem;
     z-index: 1000;
+    background-color: black;
     box-shadow: var(--BoxShadow);
 
     .logo{
-        color: var(--PrimaryTextColour);
-        font-weight: 600;
+        width: 40px;
+        height: 40px;
+        background-color: green;
+        background-image: url('../../assets/Logo_Dark.png');
         cursor: pointer;
         align-items: center;
         justify-content: center;
-
+        position: relative;
+        
         .icon{
             font-size: 25px;
             color: var(--PrimaryTextColour);
@@ -171,4 +196,3 @@
         padding: 1rem 8.5rem;
     }
 }
-

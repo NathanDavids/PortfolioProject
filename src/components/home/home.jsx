@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../home/home.css'
 import '../about/about'
+import Navbar from '../navbar/navbar';
 import About from '../about/about'
 import EducationAndExperience from '../education & experience/educationandexperience'
 import Experience from '../experience/experience';
@@ -44,6 +45,7 @@ function home() {
 
   return (
     <>
+    <Navbar isDarkMode={isDarkMode}/>
     <section id='home' className={isDarkMode ? 'dark' : 'light'}>
       <div id='homeContainer'>
         <div id='mainContainer'>
