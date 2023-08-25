@@ -1,3 +1,50 @@
+/* Lght Mode */
+#contact.light{
+    background-color: #E3E6F3;
+}
+#contactContainer.light{
+    background-color: #E3E6F3;
+}
+#form.light{
+    background-color: rgba(181, 184, 194, 0.8);
+    box-shadow: 8px 2px 10px rgba(217, 23, 31, 1);
+}
+#heading.light{
+    color: black;
+}
+#subheading.light{
+    color: black;
+}
+#icon.light{
+    color: black;
+}
+#socialHeading.light{
+    color: black;
+}
+#socialContainer.light{
+    color: black;
+}
+#inputContainer.light{
+    background-color: rgba(149, 149, 163, 0.7);
+    box-shadow: black;
+    color: black;
+}
+#sendBtn.light{
+    color: black;
+    background-color: rgba(131, 131, 143, 0.9);
+    box-shadow: 4px 4px 3px rgba(217, 23, 31, 1);
+}
+#copyright.light{
+    color: black;
+}
+#backToTop.light{
+    color: black;
+    background-color: rgba(131, 131, 143, 0.9);
+    box-shadow: 0 0 3px 4px rgba(217, 23, 31, 1);
+}
+
+
+/* Main CSS*/
 #contact{
     display: flex;
     justify-content: center;
