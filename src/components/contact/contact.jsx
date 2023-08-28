@@ -14,39 +14,36 @@ function contact({ isDarkMode }) {
     Name: '', Email: '', Number: '', Message: '', isValidName: true, isValidEmail: true, isValidNumber: true
   }
   )
-  let Name, value
-  const data = (e) =>
-  {
-    Name = e.target.name
-    value = e.target.value
-    setUserData({...userData, [Name]:value})
-  }
   const handleChange = (e) => {
     const { name, value } = e.target;
   
     let isValidName = userData.isValidName;
     let isValidEmail = userData.isValidEmail;
     let isValidNumber = userData.isValidNumber;
+    let isValidMessage = userData.isValidMessage;
   
     if (name === 'Name') {
       isValidName = /^[A-Za-z\s]+$/.test(value);
     } else if (name === 'Email') {
-      isValidEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
+      isValidEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.(com|net|za|africa|org|edu)$/.test(value);
     } else if (name === 'Number') {
       isValidNumber = /^\d{10}$/.test(value);
+    } else if (name === 'Message') {
+      isValidMessage = value.length <= 250;
     }
   
     setUserData({
       ...userData,
-      [name]: value,
+      [name]: value.toLowerCase(),
       isValidName,
       isValidEmail,
-      isValidNumber
+      isValidNumber, 
+      isValidMessage
     });
   };
   const send = async(e) =>
   {
-    const {Name, Email, Number, Message} = userData
+    const {Name, Email, Number, Message} = userData;
     e.preventDefault();
     // Perform validation checks
     if (!Name || !Email || !Number || !Message) {
@@ -55,17 +52,19 @@ function contact({ isDarkMode }) {
     }
 
     const isValidName = /^[A-Za-z\s]+$/.test(Name);
-    const isValidEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(Email);
+    const isValidEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.(com|net|za|africa|org|edu)$/.test(Email);
     const isValidNumber = /^\d{10}$/.test(Number);
+    const isValidMessage = Message.length <= 250;
 
     setUserData({
       ...userData,
       isValidName,
       isValidEmail,
-      isValidNumber
+      isValidNumber, 
+      isValidMessage
     });
 
-    if (!isValidName || !isValidEmail || !isValidNumber) {
+    if (!isValidName || !isValidEmail || !isValidNumber || !isValidMessage) {
       return;
     }
     const option = {
@@ -133,19 +132,19 @@ function contact({ isDarkMode }) {
             <form method='POST' className="flex flex-col space-y-4">
               <div>
                 <label htmlFor="" className="text-sm"> Name </label>
-                <input type="text" placeholder="Name" name="Name" value={userData.Name} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600 bg-white ${userData.isValidName ? '' : 'bg-red-200'}`} />
+                <input type="text" placeholder="Name" name="Name" value={userData.Name} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 ${userData.Name === '' ? 'bg-red-200' : (userData.isValidName ? 'bg-green-200' : 'bg-red-200')}`} />
               </div>
               <div>
                 <label htmlFor="" className="text-sm"> Email </label>
-                <input type="email" placeholder="Email" name="Email" value={userData.Email} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600 bg-white ${userData.isValidEmail ? '' : 'bg-red-200'}`} />
+                <input type="email" placeholder="Email" name="Email" value={userData.Email} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 ${userData.Email === '' ? 'bg-red-200' : (userData.isValidEmail ? 'bg-green-200' : 'bg-red-200')}`} />
               </div>
               <div>
                 <label htmlFor="" className="text-sm"> Phone Number </label>
-                <input type="number" placeholder="Phone Number" name="Number" value={userData.Number} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 bg-white ${userData.isValidNumber ? '' : 'bg-red-200'}`} />
+                <input type="number" placeholder="Phone Number" name="Number" value={userData.Number} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 ${userData.Number === '' ? 'bg-red-200' : (userData.isValidNumber ? 'bg-green-200' : 'bg-red-200')}`} />
               </div>
               <div>
                 <label htmlFor="" className="text-sm"> Message </label>
-                <textarea type="text" placeholder="Message" name="Message" value={userData.Message} onChange={handleChange} autoComplete='off' rows="4" className="text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-red-600 bg-white" />
+                <textarea type="text" placeholder="Message" name="Message" value={userData.Message} onChange={handleChange} autoComplete='off' rows="4" className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 ${userData.Message === '' ? 'bg-red-200' : (userData.isValidMessage ? 'bg-green-200' : 'bg-red-200')}`} />
               </div>
               <button
                 id='sendBtn'
