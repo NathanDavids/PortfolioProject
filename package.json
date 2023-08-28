@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "eslint-config-google": "^0.14.0",
     "firebase": "^10.3.0",
     "firebase-admin": "^11.10.1",
     "firebase-functions": "^4.4.1",
