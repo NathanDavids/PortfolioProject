@@ -41,57 +41,105 @@ function contact({ isDarkMode }) {
       isValidMessage
     });
   };
-  const send = async(e) =>
-  {
-    const {Name, Email, Number, Message} = userData;
+  const send = async (e) => {
+    const { Name, Email, Number, Message } = userData;
     e.preventDefault();
+  
     // Perform validation checks
     if (!Name || !Email || !Number || !Message) {
       alert('Please fill in all fields.');
       return;
     }
-
+  
     const isValidName = /^[A-Za-z\s]+$/.test(Name);
     const isValidEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.(com|net|za|africa|org|edu)$/.test(Email);
     const isValidNumber = /^\d{10}$/.test(Number);
     const isValidMessage = Message.length <= 250;
-
+  
     setUserData({
       ...userData,
       isValidName,
       isValidEmail,
-      isValidNumber, 
-      isValidMessage
+      isValidNumber,
+      isValidMessage,
     });
-
+  
     if (!isValidName || !isValidEmail || !isValidNumber || !isValidMessage) {
       return;
     }
-    const option = {
+  
+    // Send data to Firebase Realtime Database
+    const dbOption = {
       method: 'POST',
       headers: {
-        'Content-type': 'application/json'
+        'Content-type': 'application/json',
       },
       body: JSON.stringify({
-        Name, Email, Number, Message
-      })
-    }
-    const res = await fetch('https://portfolio-nathan-default-rtdb.firebaseio.com/Messages.json', option)
-    console.log(res)
-    if (res.ok) {
-      // Reset the input fields after successful submission
-      setUserData({
-        Name: '',
-        Email: '',
-        Number: '',
-        Message: ''
-      });
+        Name,
+        Email,
+        Number,
+        Message,
+      }),
+    };
+    const dbRes = await fetch(
+      'https://portfolio-nathan-default-rtdb.firebaseio.com/Messages.json',
+      dbOption
+    );
   
-      alert('Message Sent');
-    } else {
+    // Call SendGrid's API to send email
+    const sendGridApiKey = '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'; // Replace with your SendGrid API key
+    const sendGridEndpoint = 'smtp.sendgrid.net';
+  
+    const emailOption = {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+        Authorization: `Bearer ${sendGridApiKey}`,
+      },
+      body: JSON.stringify({
+        personalizations: [
+          {
+            to: [
+              {
+                email: Email,
+              },
+            ],
+            subject: 'Your Subject Here',
+          },
+        ],
+        from: {
+          email: 'your@email.com',
+        },
+        content: [
+          {
+            type: 'text/plain',
+            value: Message,
+          },
+        ],
+      }),
+    };
+  
+    try {
+      const emailRes = await fetch(sendGridEndpoint, emailOption);
+  
+      if (emailRes.ok) {
+        // Reset the input fields after successful submission
+        setUserData({
+          Name: '',
+          Email: '',
+          Number: '',
+          Message: '',
+        });
+  
+        alert('Message Sent');
+      } else {
+        alert('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
       alert('Failed to send message');
     }
-  }
+  };
 
   return (
     <>
