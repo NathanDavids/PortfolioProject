@@ -9,6 +9,8 @@ import {BsGithub} from 'react-icons/bs'
 import {BsInstagram} from 'react-icons/bs'
 import { data } from 'autoprefixer'
 import emailjs from 'emailjs-com';
+import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
 
 function contact({ isDarkMode }) {
   const [userData, setUserData] = useState({
@@ -42,9 +44,24 @@ function contact({ isDarkMode }) {
       isValidMessage
     });
   };
+
+
+  // Declare the ref for reCAPTCHA
+  const recaptchaRef = React.createRef();
+
+
   const send = async (e) => {
     const { Name, Email, Number, Message } = userData;
     e.preventDefault();
+    // Verify reCAPTCHA
+  const recaptchaResponse = await recaptchaRef.current.executeAsync();
+  const recaptchaVerificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=6LdnFucnAAAAAD6yGwtikpSKU66xAFGOdTsOVsXv&response=${recaptchaResponse}`;
+  const recaptchaVerification = await axios.post(recaptchaVerificationUrl);
+
+  if (!recaptchaVerification.data.success) {
+    alert("Please complete the reCAPTCHA.");
+    return;
+  }
   
     // Perform validation checks
     if (!Name || !Email || !Number || !Message) {
@@ -175,6 +192,7 @@ function contact({ isDarkMode }) {
                 <label htmlFor="" className="text-sm"> Message </label>
                 <textarea type="text" placeholder="Message" name="Message" value={userData.Message} onChange={handleChange} autoComplete='off' rows="4" className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 ${userData.Message === '' ? 'bg-red-200' : (userData.isValidMessage ? 'bg-green-200' : 'bg-red-200')}`} />
               </div>
+              <ReCAPTCHA id='recaptcha' sitekey="6LdnFucnAAAAAD6yGwtikpSKU66xAFGOdTsOVsXv" ref={recaptchaRef}/>
               <button
                 id='sendBtn'
                 onClick={send}
