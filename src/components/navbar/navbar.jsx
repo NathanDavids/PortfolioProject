@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import '../navbar/navbar.css';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { BiMenu } from 'react-icons/bi';
-import LogoDark from '../../assets/Logo_Dark.png'
-import LogoLight from '../../assets/Logo_Light.png'
+import LogoDark from '../../assets/Logo_Dark.png';
+import LogoLight from '../../assets/Logo_Light.png';
 
 function Navbar({ isDarkMode }) {
   const [active, setActive] = useState('navBar');
@@ -32,12 +32,15 @@ function Navbar({ isDarkMode }) {
             <ul id='navLists' className={`navLists flex ${isDarkMode ? 'dark' : 'light'}`}>
               {['Home', 'About', 'Education', 'Experience', 'Skills', 'Projects', 'Blog', 'Contact'].map(
                 (item) => (
-                  <li id='tags'
+                  <li
                     key={item}
                     className={`navItem ${selectedItem === item ? 'selected' : ''} ${isDarkMode ? 'dark' : 'light'}`}
-                    onClick={() => setSelectedItem(item)} // Set selected item on click
                   >
-                    <a href={`#${item.toLowerCase()}`} className={`navLink ${isDarkMode ? 'dark' : 'light'}`}>
+                    <a
+                      href={`#${item.toLowerCase()}`}
+                      className={`navLink ${isDarkMode ? 'dark' : 'light'}`}
+                      onClick={() => setSelectedItem(item)} // Set selected item on click
+                    >
                       {item}
                     </a>
                   </li>
