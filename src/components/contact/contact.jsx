@@ -8,6 +8,7 @@ import {BsWhatsapp} from 'react-icons/bs'
 import {BsGithub} from 'react-icons/bs'
 import {BsInstagram} from 'react-icons/bs'
 import { data } from 'autoprefixer'
+import emailjs from 'emailjs-com';
 
 function contact({ isDarkMode }) {
   const [userData, setUserData] = useState({
@@ -86,59 +87,39 @@ function contact({ isDarkMode }) {
       dbOption
     );
   
-    // Call SendGrid's API to send email
-    const sendGridApiKey = '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'; // Replace with your SendGrid API key
-    const sendGridEndpoint = 'smtp.sendgrid.net';
-  
-    const emailOption = {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-        Authorization: `Bearer ${sendGridApiKey}`,
+    // Call EmailJS to send email
+  try {
+    const emailRes = await emailjs.send(
+      'service_oq9n6kd', // Replace with your EmailJS email service ID
+      'template_31zjsol', // Replace with your EmailJS email template ID
+      {
+        to_email: Email,
+        from_name: 'Nathan Davids', // Replace with your name
+        name: Name,
+        email: Email,
+        number: Number,
+        message: Message,
       },
-      body: JSON.stringify({
-        personalizations: [
-          {
-            to: [
-              {
-                email: Email,
-              },
-            ],
-            subject: 'Your Subject Here',
-          },
-        ],
-        from: {
-          email: 'your@email.com',
-        },
-        content: [
-          {
-            type: 'text/plain',
-            value: Message,
-          },
-        ],
-      }),
-    };
-  
-    try {
-      const emailRes = await fetch(sendGridEndpoint, emailOption);
-  
-      if (emailRes.ok) {
-        // Reset the input fields after successful submission
-        setUserData({
-          Name: '',
-          Email: '',
-          Number: '',
-          Message: '',
-        });
-  
-        alert('Message Sent');
-      } else {
-        alert('Failed to send message');
-      }
-    } catch (error) {
-      console.error('Error sending email:', error);
+      'yuaBB-jfSU7IiaGC2' // Replace with your EmailJS user ID
+    );
+
+    if (emailRes.status === 200) {
+      // Reset the input fields after successful submission
+      setUserData({
+        Name: '',
+        Email: '',
+        Number: '',
+        Message: '',
+      });
+
+      alert('Message Sent');
+    } else {
       alert('Failed to send message');
     }
+  } catch (error) {
+    console.error('Error sending email:', error);
+    alert('Failed to send message');
+  }
   };
 
   return (

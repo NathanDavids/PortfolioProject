@@ -1,8 +1,5 @@
 {
   "projects": {
-    "default": "portfolio-nathan",
-    "portfolio": "portfolio-nathan"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "portfolio-nathan"
+  }
 }
