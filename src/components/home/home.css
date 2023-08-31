@@ -151,7 +151,7 @@
     background-color: transparent;
     color: white;
     width: 200px;
-    height: 400px;
+    height: 350px;
     position: relative;
     top: -870px;
     left: 1150px;
@@ -159,6 +159,10 @@
     justify-content: center;
     align-items: center;
     font-size: 50px;
+}
+
+.icon{
+    height: 40px;
 }
 
 #btnContainer{
