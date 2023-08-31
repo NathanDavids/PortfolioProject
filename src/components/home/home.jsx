@@ -65,10 +65,10 @@ function home() {
           </h1>
         </div>
         <div id='homeSocialsContainer'>
-          <a href="https://www.linkedin.com/in/nathan-davids-7a857b233/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='icon'/></a>
-          <a href="https://github.com/NathanDavids" target="_blank" rel="noopener noreferrer"><BsGithub className='icon'/></a>
-          <a href="https://wa.link/38j3gp" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp className='icon'/></a>
-          <button onClick={toggleDarkMode}><MdLightMode/> </button>
+          <a href="https://www.linkedin.com/in/nathan-davids-7a857b233/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='icon hover:text-[#D9171F]'/></a>
+          <a href="https://github.com/NathanDavids" target="_blank" rel="noopener noreferrer"><BsGithub className='icon hover:text-[#D9171F]'/></a>
+          <a href="https://wa.link/38j3gp" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp className='icon hover:text-[#D9171F]'/></a>
+          <button onClick={toggleDarkMode}><MdLightMode className='icon hover:text-[#D9171F]'/> </button>
         </div>
         <div id='btnContainer'>
           <a href={CV} target="_blank" rel="noopener noreferrer"><button id='downloadBtn' >Download CV</button></a>
