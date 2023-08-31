@@ -160,7 +160,7 @@
 
 #aboutTopContent{
     background-color: rgba(225, 225, 225, 0.03);
-    box-shadow: 6px 3px 10px rgba(217, 23, 31, 1);
+    box-shadow: 3px 1px 3px rgba(217, 23, 31, 1);
     width: 90%;
     height: auto;
     border-radius: 50px;
@@ -172,7 +172,7 @@
 }
 
 #imgContainer{
-    box-shadow: 5px 5px 10px rgba(217, 23, 31, 1);
+    box-shadow: 0px 0px 3px 1px rgba(217, 23, 31, 1);
     display: flex;
     justify-content: left;
     overflow: hidden;
