@@ -22,7 +22,7 @@ function Navbar({ isDarkMode }) {
   useEffect(() => {
     // Scroll event listener to update the active item based on the scroll position
     const handleScroll = () => {
-      const sections = ['home', 'about', 'educationandexperience', 'experience', 'skills', 'projects', 'blog', 'contact'];
+      const sections = ['home', 'about', 'education', 'experience', 'skills', 'projects', 'blog', 'contact'];
     
       let activeIndex = -1; // To track the index of the active section
     
@@ -61,19 +61,19 @@ function Navbar({ isDarkMode }) {
 
           <div className={active}>
           <ul id='navLists' className={`navLists flex ${isDarkMode ? 'dark' : 'light'}`}>
-  {['Home', 'About', 'Education', 'Experience', 'Skills', 'Projects', 'Blog', 'Contact'].map(
-    (item, index) => (
-      <li
-        key={item}
-        className={`navItem ${selectedItem === item ? 'selected' : ''} ${isDarkMode ? 'dark' : 'light'}`}
-      >
-        <a
-          href={`#${item.toLowerCase()}`}
-          className={`navLink ${isDarkMode ? 'dark' : 'light'}`}
-          onClick={() => setSelectedItem(item)} // Set selected item on click
-        >
-          {item}
-        </a>
+          {['Home', 'About', 'Education', 'Experience', 'Skills', 'Projects', 'Blog', 'Contact'].map(
+            (item, index) => (
+              <li
+                key={item}
+                className={`navItem ${selectedItem === item ? 'selected' : ''} ${isDarkMode ? 'dark' : 'light'}`}
+              >
+          <a
+            href={`#${item.toLowerCase()}`}
+            className={`navLink ${isDarkMode ? 'dark' : 'light'}`}
+            onClick={() => setSelectedItem(item)} // Set selected item on click
+          >
+            {item}
+          </a>
         {activeItemPosition === index && <div className="activeLine" />}
       </li>
     )

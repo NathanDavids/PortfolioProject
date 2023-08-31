@@ -1,6 +1,6 @@
 /* Light Mode */
 
-#educationandexperience.light{
+#education.light{
     background-color: #E3E6F3;
 }
 #educationandexperienceContainer.light{
@@ -18,7 +18,7 @@
 
 /* Main CSS */
 
-#educationandexperience{
+#education{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@
     background-color: black;
 }
 
-#educationandexperience.dark{
+#education.dark{
     background-color: black;
 }
 

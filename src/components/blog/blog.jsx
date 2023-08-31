@@ -21,7 +21,7 @@ function Blog({ isDarkMode }) {
           <div className="blogImage">
             <h1 className='blogHeading'> BLOG </h1>
           </div>
-          <div className={`blogPostContainer grid md:flex justify-center items-center h-full w-full overflow-hidden gap-4 md:gap-8 p-2 ${isDarkMode ? 'dark' : 'light'}`}>
+          <div className={`blogPostContainer grid md:flex justify-center items-center h-full w-full overflow-hidden gap-4 md:gap-8 ${isDarkMode ? 'dark' : 'light'}`}>
             {[
               { image: PostOne, heading: "Working World", text: "The start of my journey into becoming an adult..." },
               { image: PostTwo, heading: "New Beginnings", text: "The opportunity I've been waiting for..." },

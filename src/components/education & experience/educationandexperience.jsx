@@ -34,7 +34,7 @@ const educationandexperience = ({ isDarkMode }) => {
     )
   return (
     <>
-    <section id='educationandexperience' className={isDarkMode ? 'dark' : 'light'}>
+    <section id='education' className={isDarkMode ? 'dark' : 'light'}>
     <div id='educationandexperienceContainer' className={isDarkMode ? 'dark' : 'light'}>
         <h2 id='educationHeading' className={`font-bold text-8xl mb-20 w-full text-center ${isDarkMode ? 'dark' : 'light'}`}>
             Education
