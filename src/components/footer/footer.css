@@ -1,3 +1,21 @@
+/* Light Mode */
+#footer.light{
+    background-color: #E3E6F3;
+    color: black;
+}
+
+#footerContainer.light{
+    background-color: #E3E6F3;
+    color: black;
+}
+
+#copyrightBtn.light{
+    background-color: rgba(131, 131, 143, 0.9);
+    box-shadow: 4px 4px 3px rgba(217, 23, 31, 1);
+    color: black;
+}
+
+/* Main CSS */
 #footer{
     background-color: black;
     display: flex;
