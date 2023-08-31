@@ -154,7 +154,7 @@
     border-left: 4px solid var(--SecondaryTextColour);
     border-right: 4px solid #FFFFFF;
     border-radius: 50%;
-    animation: animate_01 5s linear infinite;
+    animation: animate_01 10s linear infinite;
     z-index: 1;
     pointer-events: none;
 }
@@ -178,7 +178,7 @@
     border-left: 4px solid var(--SecondaryTextColour);
     border-right: 4px solid #FFFFFF;
     border-radius: 50%;
-    animation: animate_02 2.5s linear infinite;
+    animation: animate_02 10s linear infinite;
     z-index: 1;
     pointer-events: none;
 }
@@ -207,7 +207,7 @@
     align-items: center;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(217, 23, 31, 1);
+    box-shadow: 0 2px 3px rgba(217, 23, 31, 1);
     overflow: hidden;
 }
 
