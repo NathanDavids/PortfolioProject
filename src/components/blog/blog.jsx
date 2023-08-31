@@ -21,7 +21,7 @@ function Blog({ isDarkMode }) {
           <div className="blogImage">
             <h1 className='blogHeading'> BLOG </h1>
           </div>
-          <div className={`blogPostContainer grid ml-20 md:ml-0 lg:ml-0 md:flex md:flex-wrap justify-center items-center h-full w-full overflow-hidden gap-4 md:gap-8 ${isDarkMode ? 'dark' : 'light'}`}>
+          <div className={`blogPostContainer grid md:flex justify-center items-center h-full w-full overflow-hidden gap-4 md:gap-8 p-2 ${isDarkMode ? 'dark' : 'light'}`}>
             {[
               { image: PostOne, heading: "Working World", text: "The start of my journey into becoming an adult..." },
               { image: PostTwo, heading: "New Beginnings", text: "The opportunity I've been waiting for..." },
@@ -29,7 +29,9 @@ function Blog({ isDarkMode }) {
             ].map((post, index) => (
               <div
                 key={index}
-                className={`postContainer overflow-hidden items-center w-[70%] h-[90%] md:w-1/1 md:h-[40%] lg:w-1/4 lg:h-[75%] xl:w-1/4 bg-white rounded-lg p-4 flex flex-col space-y-3 ${expandedPosts[index] ? 'expanded' : ''} ${isDarkMode ? 'dark' : 'light'}`}
+                className={`postContainer overflow-hidden items-center w-full md:w-[30%] lg:w-full xl:w-[35%] bg-white rounded-lg p-4 flex flex-col space-y-3 ${
+                expandedPosts[index] ? 'expanded' : ''
+              } ${isDarkMode ? 'dark' : 'light'}`}
               >
                 {expandedPosts[index] ? (
                   <>
