@@ -20,7 +20,7 @@ function Navbar({ isDarkMode }) {
   };
 
   useEffect(() => {
-    // Add a scroll event listener to update the active item based on the scroll position
+    // Scroll event listener to update the active item based on the scroll position
     const handleScroll = () => {
       const sections = ['home', 'about', 'educationandexperience', 'experience', 'skills', 'projects', 'blog', 'contact'];
     

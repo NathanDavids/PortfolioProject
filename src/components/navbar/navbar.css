@@ -43,7 +43,7 @@
     position: absolute;
     bottom: -2px;
     left: 50%;
-  transform: translateX(-50%);
+    transform: translateX(-50%);
     transition: opacity 0.3s;
   }
   
@@ -80,7 +80,9 @@
     @media screen and (max-width: 768px) {
         .navBar{
             position: absolute;
-            background: rgba(225, 225, 225, 0.03);
+            display: grid;
+            justify-content: center;
+            background: black;
             height: max-content;
             width: 80%;
             border-radius: 1rem;
@@ -122,6 +124,12 @@
                         }
                     }  
             }
+
+            .activeLine {
+                bottom: 4px;
+                left: 25%;
+                transform: translateX(-50%);
+              }
 
         .activeNavbar{
             top: 7rem;
