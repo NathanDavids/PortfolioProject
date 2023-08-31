@@ -31,31 +31,28 @@
 
 /* Main CSS */
 
+/* The NavBar underline */
 .navItem {
-    position: relative; /* Add this for positioning the pseudo-element */
-  }
-  
-  .navItem::after {
-    content: ''; /* Required for pseudo-elements */
-    position: absolute;
-    top: 23px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Center the border */
-    width: 40%; /* Adjust the width as needed */
-    height: 5px; /* Border thickness */
-    background-color: #D9171F; /* Border color */
-    opacity: 0; /* Start with no border */
-    transition: opacity 0.3s; /* Add a transition effect for smoother appearance */
-  }
-  
-  .navItem.selected::after {
-    opacity: 1; /* Show the border for the selected item */
+    position: relative;
   }
 
+  .activeLine {
+    width: 50%;
+    height: 3px;
+    background-color: #D9171F;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+  transform: translateX(-50%);
+    transition: opacity 0.3s;
+  }
+  
+  .navItem.selected .activeLine {
+    opacity: 1;
+  }
 
 .header{
-    position: fixed; /* Sticky */
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
