@@ -202,10 +202,6 @@ function contact({ isDarkMode }) {
               </button>
             </form>
           </div>
-          <div id='copyright' className={`flex justify-center justify-between items-center ${isDarkMode ? 'dark' : 'light'}`}>
-            <h1 id='copyrightText'>COPYRIGHT © NATHAN DAVIDS | 2023 </h1>
-            <a href="Home"><button id='backToTop' className={isDarkMode ? 'dark' : 'light'}> ↑ </button></a>    
-          </div>
         </div>
       </div>
     </div>

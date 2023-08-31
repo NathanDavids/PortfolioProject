@@ -9,6 +9,7 @@ import Skills from '../skills/skills';
 import Projects from '../projects/projects';
 import Blog from '../blog/blog'
 import Contact from '../contact/contact'
+import Footer from '../footer/footer'
 import Typed from 'typed.js'; // Import the Typed library
 import HomePicture from '../../assets/HomePicture.png'
 import { BsLinkedin } from 'react-icons/bs'
@@ -82,6 +83,7 @@ function home() {
     <Projects isDarkMode={isDarkMode}/>
     <Blog isDarkMode={isDarkMode}/>
     <Contact isDarkMode={isDarkMode}/>
+    <Footer isDarkMode={isDarkMode}/>
     </>
   )
 }
