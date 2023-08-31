@@ -11,7 +11,7 @@ import Blog from '../blog/blog'
 import Contact from '../contact/contact'
 import Footer from '../footer/footer'
 import Typed from 'typed.js'; // Import the Typed library
-import HomePicture from '../../assets/HomePicture.png'
+import HomePicture from '../../assets/HomePicture3.png'
 import { BsLinkedin } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 import { IoLogoWhatsapp } from 'react-icons/io'
