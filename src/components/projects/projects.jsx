@@ -49,7 +49,7 @@ function projects({ isDarkMode }) {
          >
            <div className={`listBox relative h-[125px] md:h-[99%] w-[95%] overflow-hidden rounded-4xl mb-4 ${isDarkMode ? 'dark' : 'light'}`}>
              <img id='websiteImg'
-               className={`absolute right-0 max-w-none h-auto w-[150px] md:h-[640px] md:w-[800px] left-1/2 top-1/2 md:-translate-x-1/2 -translate-y-1/2 object-cover grayscale ${
+               className={`absolute right-0 max-w-none h-auto w-[150px] md:h-[640px] md:w-[800px] left-1/2 top-1/2 md:-translate-x-1/2 -translate-y-1/2 object-cover ${
                  activeItem === index ? 'opacity-1' : 'opacity-0'
                }`}
                src={Lists.image}

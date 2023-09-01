@@ -7,11 +7,11 @@
 
 /* Light Mode */
 #projects.light{
-  background-color: #E3E6F3;
+  background-color: white;
 }
 
 #projectsContainer.light{
-  background-color: #E3E6F3;
+  background-color: white;
 }
 
 #projectsHeading.light{
@@ -29,8 +29,8 @@
 
 #contentContainer.light{
   color: black;
-  box-shadow: 10px 10px 5px rgba(217, 23, 31, 1);
-  background-color: rgba(181, 184, 194, 0.8);
+  box-shadow: 5px 5px 3px rgba(217, 23, 31, 1);
+  background-color: #ebebeb;
 }
 
 #number.light{
@@ -62,7 +62,7 @@
 
 .listBox{
 background-color: rgba(255, 255, 255, 0.04);
-  box-shadow: 5px 5px 10px rgba(217, 23, 31, 1);
+  box-shadow: 5px 5px 3px rgba(217, 23, 31, 1);
 }
 
 #projectName {
