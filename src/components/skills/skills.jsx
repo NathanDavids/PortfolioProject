@@ -62,7 +62,14 @@ function skills({ isDarkMode }) {
             </div>
           </div>
           <div className='content w-full h-full flex justify-center items-center'>
-        <div className="contentBx active" id='content1'>
+          <div className="contentBx active">
+            <div className="card">
+                <div className="textBx">
+                    <h2>SKILLS</h2>
+                </div>
+            </div>
+        </div>
+        <div className="contentBx" id='content1'>
             <div className="card">
                 <div className="imgBx">
                     <img src={HTML}/>
