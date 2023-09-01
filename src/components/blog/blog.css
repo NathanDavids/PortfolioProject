@@ -1,16 +1,15 @@
 /* Light Mode  */
 #blog.light{
-    background-color: #E3E6F3;
+    background-color: white;
 }
 #blogContainer.light{
-    background-color: #E3E6F3;
+    background-color: white;
 }
 .blogPostContainer.light{
-    background-color: #E3E6F3;
+    background-color: white;
 }
 .postContainer.light{
-    background-color: rgba(181, 184, 194, 0.8);
-    box-shadow: 10px 8px 10px rgba(217, 23, 31, 1);
+    background-color: #cfcfcf;
 }
 
 
