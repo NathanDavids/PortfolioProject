@@ -9,14 +9,18 @@ import {BsGithub} from 'react-icons/bs'
 import {BsInstagram} from 'react-icons/bs'
 import { data } from 'autoprefixer'
 import emailjs from 'emailjs-com';
-import ReCAPTCHA from "react-google-recaptcha";
-import axios from "axios";
+import ReCAPTCHA from 'react-google-recaptcha'; // Import the reCAPTCHA component
+
 
 function contact({ isDarkMode }) {
   const [userData, setUserData] = useState({
     Name: '', Email: '', Number: '', Message: '', isValidName: true, isValidEmail: true, isValidNumber: true
   }
   )
+
+  const [recaptchaValue, setRecaptchaValue] = useState(''); // To store reCAPTCHA response
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
   
@@ -46,22 +50,9 @@ function contact({ isDarkMode }) {
   };
 
 
-  // Declare the ref for reCAPTCHA
-  const recaptchaRef = React.createRef();
-
-
   const send = async (e) => {
     const { Name, Email, Number, Message } = userData;
     e.preventDefault();
-    // Verify reCAPTCHA
-  const recaptchaResponse = await recaptchaRef.current.executeAsync();
-  const recaptchaVerificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=6LdnFucnAAAAAD6yGwtikpSKU66xAFGOdTsOVsXv&response=${recaptchaResponse}`;
-  const recaptchaVerification = await axios.post(recaptchaVerificationUrl);
-
-  if (!recaptchaVerification.data.success) {
-    alert("Please complete the reCAPTCHA.");
-    return;
-  }
   
     // Perform validation checks
     if (!Name || !Email || !Number || !Message) {
@@ -83,6 +74,12 @@ function contact({ isDarkMode }) {
     });
   
     if (!isValidName || !isValidEmail || !isValidNumber || !isValidMessage) {
+      return;
+    }
+
+    // Verify the reCAPTCHA response
+    if (!recaptchaValue) {
+      alert('Please complete the reCAPTCHA verification.');
       return;
     }
   
@@ -178,21 +175,25 @@ function contact({ isDarkMode }) {
             <form method='POST' className="flex flex-col space-y-4">
               <div>
                 <label htmlFor="" className="text-sm"> Name </label>
-                <input type="text" placeholder="Name" name="Name" value={userData.Name} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 ${userData.Name === '' ? 'bg-red-200' : (userData.isValidName ? 'bg-green-200' : 'bg-red-200')}`} />
+                <input type="text" placeholder="Name" name="Name" value={userData.Name} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#D9171F]  ${userData.Name === '' ? 'bg-red-200' : (userData.isValidName ? 'bg-green-200' : 'bg-red-200')}`} />
               </div>
               <div>
                 <label htmlFor="" className="text-sm"> Email </label>
-                <input type="email" placeholder="Email" name="Email" value={userData.Email} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 ${userData.Email === '' ? 'bg-red-200' : (userData.isValidEmail ? 'bg-green-200' : 'bg-red-200')}`} />
+                <input type="email" placeholder="Email" name="Email" value={userData.Email} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#D9171F] ${userData.Email === '' ? 'bg-red-200' : (userData.isValidEmail ? 'bg-green-200' : 'bg-red-200')}`} />
               </div>
               <div>
                 <label htmlFor="" className="text-sm"> Phone Number </label>
-                <input type="number" placeholder="Phone Number" name="Number" value={userData.Number} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 ${userData.Number === '' ? 'bg-red-200' : (userData.isValidNumber ? 'bg-green-200' : 'bg-red-200')}`} />
+                <input type="number" placeholder="Phone Number" name="Number" value={userData.Number} onChange={handleChange} autoComplete='off' className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#D9171F] ${userData.Number === '' ? 'bg-red-200' : (userData.isValidNumber ? 'bg-green-200' : 'bg-red-200')}`} />
               </div>
               <div>
                 <label htmlFor="" className="text-sm"> Message </label>
-                <textarea type="text" placeholder="Message" name="Message" value={userData.Message} onChange={handleChange} autoComplete='off' rows="4" className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 ${userData.Message === '' ? 'bg-red-200' : (userData.isValidMessage ? 'bg-green-200' : 'bg-red-200')}`} />
+                <textarea type="text" placeholder="Message" name="Message" value={userData.Message} onChange={handleChange} autoComplete='off' rows="4" className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#D9171F] ${userData.Message === '' ? 'bg-red-200' : (userData.isValidMessage ? 'bg-green-200' : 'bg-red-200')}`} />
               </div>
-              <ReCAPTCHA id='recaptcha' sitekey="6LdnFucnAAAAAD6yGwtikpSKU66xAFGOdTsOVsXv" ref={recaptchaRef} className='flex justify-center'/>
+              <ReCAPTCHA
+                className='flex justify-center'
+                sitekey="6LdnFucnAAAAAD6yGwtikpSKU66xAFGOdTsOVsXv"
+                onChange={(value) => setRecaptchaValue(value)} // Store reCAPTCHA response
+              />
               <button
                 id='sendBtn'
                 onClick={send}
