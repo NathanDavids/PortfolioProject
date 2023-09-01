@@ -9,7 +9,7 @@ import {BsGithub} from 'react-icons/bs'
 import {BsInstagram} from 'react-icons/bs'
 import { data } from 'autoprefixer'
 import emailjs from 'emailjs-com';
-import ReCAPTCHA from 'react-google-recaptcha'; // Import the reCAPTCHA component
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 function contact({ isDarkMode }) {
@@ -104,17 +104,17 @@ function contact({ isDarkMode }) {
     // Call EmailJS to send email
   try {
     const emailRes = await emailjs.send(
-      'service_oq9n6kd', // Replace with your EmailJS email service ID
-      'template_31zjsol', // Replace with your EmailJS email template ID
+      'service_oq9n6kd', // EmailJS email service ID
+      'template_31zjsol', // EmailJS email template ID
       {
         to_email: Email,
-        from_name: 'Nathan Davids', // Replace with your name
+        from_name: 'Nathan Davids',
         name: Name,
         email: Email,
         number: Number,
         message: Message,
       },
-      'yuaBB-jfSU7IiaGC2' // Replace with your EmailJS user ID
+      'yuaBB-jfSU7IiaGC2' // EmailJS user ID
     );
 
     if (emailRes.status === 200) {
@@ -207,6 +207,7 @@ function contact({ isDarkMode }) {
       </div>
     </div>
     </section>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </>
   )
 }
