@@ -9,26 +9,26 @@
 
 /* Light Mode */
 #about.light{
-    background-color: #E3E6F3;
+    background-color: white;
 }
 #aboutContainer.light{
-    background-color: #E3E6F3;
+    background-color: white;
 }
 #aboutTop.light{
-    background-color: w#E3E6F3;
+    background-color: white;
 }
 #aboutHead.light{
-    background-color: #E3E6F3;
+    background-color: white;
 }
 #aboutLine.light{
     border-color: black;
 }
 #aboutTopContent.light{
-    background-color: rgba(181, 184, 194, 0.8);
-    box-shadow: 6px 3px 5px rgba(217, 23, 31, 1);
+    background-color: #ebebeb;
+    box-shadow: 1px 1px 2px 1px rgba(217, 23, 31, 1);
 }
 #imgContainer.light{
-    box-shadow: 5px 5px 6px rgba(217, 23, 31, 1);
+    box-shadow: 0px 0px 2px 1px rgba(217, 23, 31, 1);
 }
 #textContainer.light{
     color: black;
@@ -49,54 +49,61 @@
     color: black;
 }
 #interestHead.light{
-    background-color: #E3E6F3;
+    background-color: white;
 }
 #aboutHeading.light{
-    background-color: #E3E6F3;
+    background-color: white;
 }
 #aboutBottomContent.light{
-    background-color: #E3E6F3;
+    background-color: white;
 }
 #topRow.light{
-    background-color: #E3E6F3;
+    background-color: white;
 }
 #sports.light{
-    background-color: rgba(181, 184, 194, 0.8);
+    background-color: #ebebeb;
     color: black;
-    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+    box-shadow: 0 3px 2px rgba(217, 23, 31, 1);
+    font-weight: 600;
 }
 #gaming.light{
-    background-color: rgba(181, 184, 194, 0.8);
+    background-color: #ebebeb;
     color: black;
-    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+    box-shadow: 0 3px 2px rgba(217, 23, 31, 1);
+    font-weight: 600;
 }
 #gaming.light{
-    background-color: rgba(181, 184, 194, 0.8);
+    background-color: #ebebeb;
     color: black;
-    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+    box-shadow: 0 3px 2px rgba(217, 23, 31, 1);
+    font-weight: 600;
 }
 #webDev.light{
-    background-color: rgba(181, 184, 194, 0.8);
+    background-color: #ebebeb;
     color: black;
-    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+    box-shadow: 0 3px 2px rgba(217, 23, 31, 1);
+    font-weight: 600;
 }
 #appDev.light{
-    background-color: rgba(181, 184, 194, 0.8);
+    background-color: #ebebeb;
     color: black;
-    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+    box-shadow: 0 3px 2px rgba(217, 23, 31, 1);
+    font-weight: 600;
 }
 #cyber.light{
-    background-color: rgba(181, 184, 194, 0.8);
+    background-color: #ebebeb;
     color: black;
-    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+    box-shadow: 0 3px 2px rgba(217, 23, 31, 1);
+    font-weight: 600;
 }
 #ai.light{
-    background-color: rgba(181, 184, 194, 0.8);
+    background-color: #ebebeb;
     color: black;
-    box-shadow: 0 2px 2px rgba(217, 23, 31, 1);
+    box-shadow: 0 3px 2px rgba(217, 23, 31, 1);
+    font-weight: 600;
 }
 #workHead.light{
-    background-color: #E3E6F3;
+    background-color: white;
 }
 
 #workLine1.light{
@@ -107,9 +114,9 @@
     border-color: black;
 }
 #projectsBlock.light{
-    background-color: rgba(181, 184, 194, 0.8);
+    background-color: #ebebeb;
     color: black;
-    box-shadow: 0 4px 2.5px rgba(217, 23, 31, 1);
+    box-shadow: 0 4px 2px rgba(217, 23, 31, 1);
 }
 
 /* Main CSS*/
