@@ -191,7 +191,7 @@ function contact({ isDarkMode }) {
               </div>
               <ReCAPTCHA
                 className='flex justify-center'
-                sitekey="6LdnFucnAAAAAD6yGwtikpSKU66xAFGOdTsOVsXv"
+                sitekey="6LfnjO8nAAAAAI_0dk6g7nEoRHcf-ptMEBe7zQ_z"
                 onChange={(value) => setRecaptchaValue(value)} // Store reCAPTCHA response
               />
               <button
