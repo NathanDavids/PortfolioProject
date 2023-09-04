@@ -33,12 +33,24 @@
     overflow: hidden;
 }
 
+@media screen and (max-width:425px){
+    #experience{
+        height: 2400px;
+        #experienceContainer{
+            height: 2300px;
+            #experienceHeading{
+                font-size: 80px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:768px){
     #experience{
-        height: 2800px;
+        height: 3000px;
     }
     #experienceContainer{
-        height: 2000px;
+        height: 2200px;
     }
 }
 

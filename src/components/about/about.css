@@ -420,10 +420,10 @@
 
 @media screen and (max-width:768px){
     #about{
-        height: 2400px;
+        height: 2500px;
     }
     #aboutContainer{
-        height: 2300px;
+        height: 2200px;
     }
 }
 

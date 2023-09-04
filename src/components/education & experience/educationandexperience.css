@@ -41,9 +41,21 @@
 
 /* Media Queries */
 
+@media screen and (max-width:425px){
+    #education{
+        height: 2500px;
+        #educationandexperienceContainer{
+            height: 2300px;
+            #educationHeading{
+                font-size: 80px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:768px){
     #educationandexperience{
-        height: 2100px;
+        height: 2000px;
     }
     #educationandexperienceContainer{
         height: 2100px;
