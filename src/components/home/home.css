@@ -209,6 +209,20 @@
         #homeContainer{
             width: 425px;
             height: 650px;
+            #nameContainer{
+                display: block;
+                white-space: nowrap;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                height: auto;
+                color: white;
+                font-size: 100px;
+                top: 380px;
+                flex-wrap: wrap;
+                animation: name 8.5s linear infinite;
+            }    
         #homeImgContainer{
             display: flex;
             justify-content: center;
@@ -216,7 +230,7 @@
             background-color: rgba(0, 0, 0, 0);
             position: relative;
             top: -130px;
-            left: -70px;
+            left: -30px;
             width: 100%;
             height: 100%;
             }
@@ -224,7 +238,7 @@
             width: 300px;
             height: 400px;
             top: -650px;
-            left: 10px;
+            left: 60px;
             }
             #homeQuote{
             font-size: 30px;
@@ -232,8 +246,8 @@
             #homeSocialsContainer{
             width: 300px;
             height: 350px;
-            top: -1050px;
-            left: 15px;
+            top: -1040px;
+            left: 65px;
             display: flex;
             justify-content: space-around;
             font-size: 50px;
@@ -247,7 +261,7 @@
             height: 100px;
             position: relative;
             top: -1170px;
-            left: 60px;
+            left: 110px;
             }
         }    
     }

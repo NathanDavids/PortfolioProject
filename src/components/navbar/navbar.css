@@ -199,3 +199,9 @@
         padding: 1rem 8.5rem;
     }
 }
+
+@media screen and (max-width:425px){
+    .header{
+        width: 425px;
+    }
+}
