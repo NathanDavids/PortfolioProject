@@ -235,10 +235,10 @@
             font-size: 30px;
             }
             #homeSocialsContainer{
-            width: 300px;
+            width: 400px;
             height: 350px;
             top: -1040px;
-            left: 65px;
+            left: 15px;
             display: flex;
             justify-content: space-around;
             font-size: 50px;
@@ -252,7 +252,7 @@
             height: 100px;
             position: relative;
             top: -1170px;
-            left: 110px;
+            left: 105px;
             }
         }    
     }

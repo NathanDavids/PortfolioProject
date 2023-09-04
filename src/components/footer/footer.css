@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100px;
 }
 
 #footerContainer{
@@ -33,4 +34,12 @@
 #copyrightBtn{
     background-color: rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 10px rgba(217, 23, 31, 1);
+}
+
+/* Media Queries */
+
+@media screen and (max-width:768px){
+    #footer{
+        height: 50px;
+    }
 }

@@ -43,19 +43,19 @@
 
 @media screen and (max-width:768px){
     #educationandexperience{
-        height: 2300px;
+        height: 2100px;
     }
     #educationandexperienceContainer{
-        height: 2200px;
+        height: 2100px;
     }
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){
     #educationandexperience{
-        height: 1700px;
+        height: 1500px;
     }
     #educationandexperienceContainer{
-        height: 1400px;
+        height: 1500px;
     }
 }
 
