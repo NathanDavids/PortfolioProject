@@ -114,10 +114,23 @@
 /* Media Queries */
 @media screen and (max-width:768px){
     #contact{
-        height: 1500px;
+        height: 1650px;
     }
     #contactContainer{
+        height: 1500px;
+    }
+    #form{
         height: 1350px;
     }
+    #contact{
+        #contactContainer{
+            #form{
+                #heading{
+                    font-size: 55px;
+                }
+            }
+        }
+    }
+    
 }
 

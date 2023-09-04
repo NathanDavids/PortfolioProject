@@ -32,7 +32,7 @@
 
 .blogImage{
     width: 100%;
-    height: 60%;
+    height: 600px;
     background-color: blue;
     display: flex;
     justify-content: center;
@@ -50,7 +50,7 @@
     top: 50%; /* Vertically center the heading */
     left: 50%; /* Horizontally center the heading */
     transform: translate(-50%, -50%); /* Centering trick */
-    font-size: 12rem;
+    font-size: 160px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for the heading */
     padding: 0px 20px;
@@ -98,6 +98,8 @@
     font-size: 40px;
     font-weight: 600;
 }
+
+/* Media Queries */
 
 @media screen and (max-width:1024px){
     #blog{

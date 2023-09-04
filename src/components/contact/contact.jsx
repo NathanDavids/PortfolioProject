@@ -190,6 +190,7 @@ function contact({ isDarkMode }) {
                 <textarea type="text" placeholder="Message" name="Message" value={userData.Message} onChange={handleChange} autoComplete='off' rows="4" className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#D9171F] ${userData.Message === '' ? 'bg-red-200' : (userData.isValidMessage ? 'bg-green-200' : 'bg-red-200')}`} />
               </div>
               <ReCAPTCHA
+                id='recaptcha'
                 className='flex justify-center'
                 sitekey="6LfnjO8nAAAAAI_0dk6g7nEoRHcf-ptMEBe7zQ_z"
                 onChange={(value) => setRecaptchaValue(value)} // Store reCAPTCHA response
