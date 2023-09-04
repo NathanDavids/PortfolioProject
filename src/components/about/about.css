@@ -288,7 +288,34 @@
     height: 10vh;
     border-radius: 20px;
     color: var(--PrimaryTextColour);
+    transition: all 1000ms;
+    overflow: hidden;
 }
+
+#sports:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    font-size: 30px;
+    outline: 2px solid #D9171F;
+    box-shadow: 4px 5px 17px -4px #D9171F;
+  }
+
+  #sports::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #D9171F;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  #sports:hover::before {
+    width: 100%;
+  }
 
 #gaming{
     display: flex;

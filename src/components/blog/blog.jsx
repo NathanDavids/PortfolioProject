@@ -64,6 +64,7 @@ function Blog({ isDarkMode }) {
                     <h2 className='postHeading text-center text-xl font-semibold mb-2'>{post.heading}</h2>
                     <br />
                     <p className='postText text-sm mb-4 m-2'>{post.text}</p>
+                    <br />
                     <button onClick={() => handleExpandPost(index)} className='inline-block self-center px-8 py-4 bg-[#000000] text-white px-4 py-2 rounded-md hover:bg-[#D9171F]'> Read More </button>
                   </>
                 )}

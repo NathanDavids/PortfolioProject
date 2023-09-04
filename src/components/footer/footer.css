@@ -36,6 +36,10 @@
     box-shadow: 0 0 10px rgba(217, 23, 31, 1);
 }
 
+#copyrightBtn:hover {
+    background-color: #D9171F;
+}
+
 /* Media Queries */
 
 @media screen and (max-width:768px){
