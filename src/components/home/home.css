@@ -210,17 +210,8 @@
             width: 425px;
             height: 650px;
             #nameContainer{
-                display: block;
-                white-space: nowrap;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                width: 100%;
-                height: auto;
-                color: white;
                 font-size: 100px;
                 top: 380px;
-                flex-wrap: wrap;
                 animation: name 8.5s linear infinite;
             }    
         #homeImgContainer{
@@ -229,7 +220,7 @@
             align-items: center;
             background-color: rgba(0, 0, 0, 0);
             position: relative;
-            top: -130px;
+            top: -113px;
             left: -30px;
             width: 100%;
             height: 100%;
