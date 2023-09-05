@@ -169,7 +169,7 @@ function contact({ isDarkMode }) {
             <a href="https://www.linkedin.com/in/nathan-davids-7a857b233" target="_blank" rel="noopener noreferrer"><BsLinkedin className='icon hover:text-[#D9171F]'/></a>
             <a href="https://github.com/NathanDavids" target="_blank" rel="noopener noreferrer"><BsGithub className='icon hover:text-[#D9171F]'/></a>
             <a href="https://wa.link/38j3gp" target="_blank" rel="noopener noreferrer"><BsWhatsapp className='icon hover:text-[#D9171F]'/></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><BsInstagram className='icon hover:text-[#D9171F]'/></a>
+            <a href="https://www.instagram.com/nathandavids_dev/" target="_blank" rel="noopener noreferrer"><BsInstagram className='icon hover:text-[#D9171F]'/></a>
           </div>
           <div id='inputContainer' className={`bg-black rounded-xl shadow-lg p-8 ${isDarkMode ? 'dark' : 'light'}`}>
             <form method='POST' className="flex flex-col space-y-4">

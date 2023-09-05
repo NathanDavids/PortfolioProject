@@ -123,7 +123,9 @@
         #contactContainer{
             height: 1200px;
         }
-        
+        #inputContainer{
+            height: 640px;
+        }
     }
 }
 
@@ -143,9 +145,15 @@
                 #heading{
                     font-size: 55px;
                 }
+                
             }
         }
     }
-    
+}
+
+@media screen and (max-width:768px){
+    #inputContainer{
+        height: 605px;
+    }
 }
 

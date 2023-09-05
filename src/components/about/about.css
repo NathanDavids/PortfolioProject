@@ -196,13 +196,14 @@
 }
 
 #textContainer{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     margin-left: 1rem;
     width: 50vw;
     height: auto;
     background-color: rgba(0, 0, 0, 0);
     text-align: center;
     overflow: hidden;
-    border-radius: 50px 50px 50px 50px;
 }
 
 #Heading{
@@ -459,7 +460,53 @@
     color: var(--SecondaryTextColour);
 }
 
-@media screen and (max-width:425px){
+@media screen and (max-width:320px){
+    #about{
+        #aboutContainer{
+            #imgContainer{
+                width: 95px;
+            }
+            #textContainer{
+                #Heading{
+                    font-size: 25px;
+                }
+                #subHeading{
+                    font-size: 15px;
+                }
+                #keyTop{
+                    font-size: 15px;
+                }
+                #keyBottom{
+                    font-size: 15px;
+                }
+                #bodyText{
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:320px) and (max-width:375px){
+    #about{
+        #aboutContainer{
+            height: 2100px;
+            #textContainer{
+                height: 1395px;
+            }
+            #workContent{
+                height: 150px;
+            }
+            #projectsBlock{
+                width: 250px;
+                height: 150px;
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:375px) and (max-width:425px){
     #about{
         width: 425px;
     }
@@ -470,7 +517,16 @@
         height: 2100px;
     }
     #aboutContainer{
-        height: 1900px;
+        height: 2000px;
+    }
+}
+
+@media screen and (max-width:425px) and (max-width:768px){
+    #about{
+        height: 2100px;
+    }
+    #aboutContainer{
+        height: 1950px;
     }
     #Heading{
         font-size: 30px;
@@ -497,6 +553,6 @@
         height: 1550px;
     }
     #aboutContainer{
-        height: 1200px;
+        height: 1330px;
     }
 }
