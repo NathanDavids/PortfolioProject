@@ -116,7 +116,17 @@
 }
 
 /* Media Queries */
-@media screen and (max-width:768px){
+@media screen and (max-width:425px){
+    #contact{
+        height: 1200px;
+        #contactContainer{
+            height: 1200px;
+        }
+        
+    }
+}
+
+@media screen and (max-width:425px) and (max-width:768px){
     #contact{
         height: 1650px;
     }

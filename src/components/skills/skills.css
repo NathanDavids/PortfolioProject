@@ -277,6 +277,12 @@
 
 /* Media Queries */
 
+@media screen and (max-width:425px){
+    #skills{
+        height: 600px;
+    }
+}
+
 @media screen and (max-width:768px){
     #skillsContainer{
         width: 350px;

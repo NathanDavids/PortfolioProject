@@ -112,9 +112,9 @@
 
 @media screen and (max-width:768px){
     #blog{
-        height: 2400px;
+        height: 2000px;
     }
     #blogContainer{
-        height: 2400px;
+        height: 2000px;
     }
 }

@@ -41,6 +41,13 @@
 }
 
 /* Media Queries */
+@media screen and (max-width:425px){
+    #footer{
+        #footerContainer{
+            font-size: 10px;
+        }
+    }
+}
 
 @media screen and (max-width:768px){
     #footer{

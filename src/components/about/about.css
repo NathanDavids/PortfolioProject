@@ -461,10 +461,10 @@
 
 @media screen and (max-width:768px){
     #about{
-        height: 2500px;
+        height: 2100px;
     }
     #aboutContainer{
-        height: 2200px;
+        height: 1900px;
     }
     #Heading{
         font-size: 30px;
