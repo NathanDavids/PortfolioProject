@@ -459,6 +459,12 @@
     color: var(--SecondaryTextColour);
 }
 
+@media screen and (max-width:425px){
+    #about{
+        width: 425px;
+    }
+}
+
 @media screen and (max-width:768px){
     #about{
         height: 2100px;
@@ -471,6 +477,9 @@
     }
     .interestContainer{
         font-size: small;
+    }
+    .interestContainer:hover{
+        font-size: 13px;
     }
 }
 

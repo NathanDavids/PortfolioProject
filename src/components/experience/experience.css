@@ -35,6 +35,7 @@
 
 @media screen and (max-width:425px){
     #experience{
+        width: 425px;
         height: 2300px;
         #experienceContainer{
             height: 2300px;

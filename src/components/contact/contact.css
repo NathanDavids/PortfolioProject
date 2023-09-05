@@ -118,6 +118,7 @@
 /* Media Queries */
 @media screen and (max-width:425px){
     #contact{
+        width: 425px;
         height: 1200px;
         #contactContainer{
             height: 1200px;

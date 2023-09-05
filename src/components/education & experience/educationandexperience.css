@@ -43,6 +43,7 @@
 
 @media screen and (max-width:425px){
     #education{
+        width: 425px;
         height: 2500px;
         #educationandexperienceContainer{
             height: 2300px;

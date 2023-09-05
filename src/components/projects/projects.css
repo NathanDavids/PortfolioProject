@@ -110,6 +110,12 @@ background-color: rgba(255, 255, 255, 0.04);
 
 /* Media Queries */
 
+@media screen and (max-width:425px){
+  #projects{
+      width: 425px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #projects{
     height: 1000px;

@@ -4,7 +4,7 @@ import '../footer/footer.css'
 function footer({ isDarkMode }) {
   return (
     <>
-    <section id='footer' className={isDarkMode ? 'dark' : 'light'}>
+    <section id='footer' className={`w-full ${isDarkMode ? 'dark' : 'light'}`}>
     <div id="footerContainer" className={`flex h-[50px] w-full ml-12 items-center ${isDarkMode ? 'dark' : 'light'}`}>
     <p id='copyrightText' className="flex-grow text-center w-full pl-12">COPYRIGHT © NATHAN DAVIDS | 2023 </p>
     
