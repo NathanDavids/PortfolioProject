@@ -36,6 +36,11 @@
 #number.light{
   color: rgba(0, 0, 0, 0.6);
 }
+
+#linkBtn.light{
+  top: 150px;
+}
+
 /* Main CSS */
 
 #projects{

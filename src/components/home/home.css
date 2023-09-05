@@ -396,4 +396,8 @@
     }
 }
 
-
+@media screen and (min-width:1024px){
+    #btnContainer{
+        left: 1150px;
+    }
+}

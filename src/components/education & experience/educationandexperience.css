@@ -74,10 +74,10 @@
 
 
 @media screen and (min-width:1024px) and (max-width:1600px){
-    #educationandexperience{
-      height: 1050px;
+    #education{
+      height: 1200px;
     }
     #educationandexperienceContainer{
-      height: 1200px;
+      height: 1000px;
     }
 }
