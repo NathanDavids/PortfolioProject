@@ -81,12 +81,12 @@ function Navbar({ isDarkMode }) {
 </ul>
 
             <div onClick={removeNavbar} className='closeNavbar'>
-              <AiFillCloseCircle className='icon' />
+              <AiFillCloseCircle className={`icon ${isDarkMode ? 'dark' : 'light'}`} />
             </div>
           </div>
 
-          <div onClick={showNav} className='toggleNavbar'>
-            <BiMenu className='icon' />
+          <div onClick={showNav} className={`toggleNavbar ${isDarkMode ? 'dark' : 'light'}`}>
+            <BiMenu className={`icon ${isDarkMode ? 'dark' : 'light'}`} />
           </div>
         </header>
       </section>

@@ -16,15 +16,27 @@
 }
 
 .header.light{
+    .toggleNavbar.light{
+        .icon{
+            color: black;
+        }
+    }
     .navBar{
+        background-color: white;
         .navLists{
+            color: black;
             .navItem{
+                color: black;
                 .navLink{
                     color: black;
                 }
             }
         }
     }
+}
+
+.icon.light{
+    color: black;
 }
 
 
@@ -76,6 +88,7 @@
             transform: translateY(5px);
         }
     }
+ 
 
     @media screen and (max-width: 768px) {
         .navBar{
