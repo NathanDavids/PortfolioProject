@@ -39,7 +39,10 @@
         #experienceContainer{
             height: 2300px;
             #experienceHeading{
-                font-size: 80px;
+                font-size: 75px;
+            }
+            .companyText{
+                font-size: large;
             }
         }
     }

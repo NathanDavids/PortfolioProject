@@ -217,7 +217,11 @@
                 font-size: 100px;
                 top: 380px;
                 animation: name 8.5s linear infinite;
-            }    
+            }
+        .homeImg{
+            width: 500px;
+            height: 450px;
+        }    
         #homeImgContainer{
             display: flex;
             justify-content: center;

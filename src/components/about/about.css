@@ -206,7 +206,7 @@
 }
 
 #Heading{
-    font-size: 3rem;
+    font-size: 50px;
     color: var(--PrimaryTextColour);
 }
 
@@ -465,6 +465,12 @@
     }
     #aboutContainer{
         height: 2200px;
+    }
+    #Heading{
+        font-size: 30px;
+    }
+    .interestContainer{
+        font-size: small;
     }
 }
 
