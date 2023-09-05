@@ -38,6 +38,9 @@
 .icon.light{
     color: black;
 }
+.icon:hover.light{
+    color: #D9171F;
+}
 
 
 
