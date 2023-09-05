@@ -13,7 +13,7 @@ export const List = [
         displayName3: "R",
         displayName4: "S",
         number: "01",
-        link:"https://www.audi.co.za/za/web/en/models/r8/r8-coupe-v10-performance-quattro.html",
+        link:"https://mystic-cars-website.netlify.app/",
     },
     {
         image: Project2,
@@ -25,7 +25,7 @@ export const List = [
         displayName4: "I",
         displayName5: "E",
         number: "02",
-        link: "https://www.imdb.com/title/tt7286456/",
+        link: "https://the-joker-landing-page.netlify.app/",
 
     },
     {
@@ -38,7 +38,7 @@ export const List = [
         displayName4: "E",
         displayName5: "S",
         number: "03",
-        link:"https://www.nike.com/za/",
+        link:"https://the-nike-landing-page.netlify.app/",
     },
     {
         image: Project4,
@@ -50,6 +50,6 @@ export const List = [
         displayName4: "E",
         displayName5: "S",
         number: "04",
-        link:"https://www.travelstart.co.za/"
+        link:"https://the-games4u-games.netlify.app/"
     },
 ];
