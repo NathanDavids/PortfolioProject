@@ -89,24 +89,24 @@ function about({ isDarkMode }) {
         </div>
         <div id='aboutBottomContent'className={isDarkMode ? 'dark' : 'light'} >
           <div id='topRow' className={isDarkMode ? 'dark' : 'light'}>
-            <div id='sports' className={isDarkMode ? 'dark' : 'light'}>
+            <div id='sports' className={`interestContainer ${isDarkMode ? 'dark' : 'light'}`}>
               <h1>Sports</h1>
             </div>
-            <div id='gaming' className={isDarkMode ? 'dark' : 'light'}>
+            <div id='gaming' className={`interestContainer ${isDarkMode ? 'dark' : 'light'}`}>
               <h1>Gaming</h1>
             </div>
-            <div id='webDev' className={isDarkMode ? 'dark' : 'light'}>
+            <div id='webDev' className={`interestContainer ${isDarkMode ? 'dark' : 'light'}`}>
               <h1>Web Development</h1>
             </div>
           </div>
           <div id='bottomRow'>
-            <div id='appDev' className={isDarkMode ? 'dark' : 'light'}>
+            <div id='appDev' className={`interestContainer ${isDarkMode ? 'dark' : 'light'}`}>
               <h1>App Development</h1>
             </div>
-            <div id='cyber' className={isDarkMode ? 'dark' : 'light'}>
+            <div id='cyber' className={`interestContainer ${isDarkMode ? 'dark' : 'light'}`}>
               <h1>Cyber-Security</h1>
             </div>
-            <div id='ai' className={isDarkMode ? 'dark' : 'light'}>
+            <div id='ai' className={`interestContainer ${isDarkMode ? 'dark' : 'light'}`}>
               <h1>Artificial Intelligence</h1>
             </div>
           </div>
