@@ -334,14 +334,14 @@
        width: 708px;
        height: 150px;
        top: -650px;
-       left: 130px;
+       left: 13px;
     }
     #homeQuote{
         font-size: 45px;
     }
     #homeSocialsContainer{
        top: -670px;
-       left: 130px;
+       left: 13px;
        display: flex;
        justify-content: space-around;
        height: 100px;
@@ -349,7 +349,7 @@
     }
     #btnContainer{
         top: -670px;
-        left: 380px;
+        left: 270px;
     }
 }
 
@@ -396,8 +396,8 @@
     }
 }
 
-@media screen and (max-width:1024px){
+/* @media screen and (max-width:1024px){
     #btnContainer{
         left: 1150px;
     }
-}
+} */

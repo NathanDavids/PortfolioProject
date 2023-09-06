@@ -547,10 +547,10 @@
 
 @media screen and (min-width:768px) and (max-width:1440px){
     #about{
-        height: 1700px;
+        height: 1900px;
     }
     #aboutContainer{
-        height: 1600px;
+        height: 1800px;
     }
 }
 

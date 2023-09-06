@@ -60,9 +60,9 @@
 
 @media screen and (max-width:1024px) and (max-width:1440px){
     #experience{
-        height: 900px;
+        height: 1100px;
     }
     #experienceContainer{
-        height: 1250px;
+        height: 1350px;
     }
 }

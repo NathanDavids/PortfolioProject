@@ -286,6 +286,9 @@
 }
 
 @media screen and (max-width:768px){
+    #skills{
+        height: 1000px;
+    }
     #skillsContainer{
         width: 350px;
         height: 350px;
