@@ -69,7 +69,9 @@ function projects({ isDarkMode }) {
               <div className={`flex justify-center left-8 top-8 -translate-y-36 p-10 md:p-10 w-[800px] transition-[transform,opacity] ${
               activeItem === index ? 'md:translate-x-0 md:opacity-100' : 'md:translate-x-4 md:opacity-0'
               }`}>
-                <a href={Lists.link} target="_blank"><button id='linkBtn' className='text-lg uppercase text-[#FFFFFF] md:text-4xl'>Explore</button></a>
+                <a href={Lists.link} target="_blank"><button id='linkBtn' className={`text-lg uppercase text-[#FFFFFF] md:text-4xl ${
+    isDarkMode ? 'dark' : 'light'
+  }`}>Explore</button></a>
               </div>
               </div>
             </li>
