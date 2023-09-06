@@ -552,6 +552,9 @@
     #aboutContainer{
         height: 1800px;
     }
+    .interestContainer:hover{
+        font-size: x-large;
+    }
 }
 
 @media screen and (min-width:1024px) and (max-width:1280px){
