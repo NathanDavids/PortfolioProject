@@ -421,14 +421,14 @@
 
 #workLine1{
     position: relative;
-    right: 40px;
+    right: 15px;
     width: 25%;
     color: var(--PrimaryTextColour);
 }
 
 #workLine2{
     position: relative;
-    left: 40px;
+    left: 15px;
     width: 25%;
     color: var(--PrimaryTextColour);
 }

@@ -113,7 +113,7 @@ function about({ isDarkMode }) {
         </div>
         <div id='workHead' className={isDarkMode ? 'dark' : 'light'}>
           <hr id='workLine1' className={isDarkMode ? 'dark' : 'light'}/>
-          <h1 id='workHeading'> Work </h1>
+          <h1 id='workHeading'> Previous Work </h1>
           <hr id='workLine2' className={isDarkMode ? 'dark' : 'light'}/>
         </div>
         <div id='workContent'>

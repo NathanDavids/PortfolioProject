@@ -74,6 +74,7 @@ function contact({ isDarkMode }) {
     });
   
     if (!isValidName || !isValidEmail || !isValidNumber || !isValidMessage) {
+      alert('Failed! Please ensure you entered the correct information')
       return;
     }
 
