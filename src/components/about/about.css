@@ -502,6 +502,9 @@
                 height: 150px;
                 font-size: 50px;
             }
+            .interestContainer{
+                font-size: x-small;
+            }
         }
     }
 }
@@ -509,6 +512,7 @@
 @media screen and (max-width:375px) and (max-width:425px){
     #about{
         width: 425px;
+        margin-top: -1px;
     }
 }
 

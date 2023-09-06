@@ -36,9 +36,9 @@
 @media screen and (max-width:425px){
     #experience{
         width: 425px;
-        height: 2300px;
+        height: 3300px;
         #experienceContainer{
-            height: 2300px;
+            height: 3500px;
             #experienceHeading{
                 font-size: 75px;
             }
@@ -58,7 +58,7 @@
     }
 }
 
-@media screen and (min-width:1024px) and (max-width:1440px){
+@media screen and (max-width:1024px) and (max-width:1440px){
     #experience{
         height: 900px;
     }

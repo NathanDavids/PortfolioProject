@@ -45,6 +45,7 @@
 @media screen and (max-width:425px){
     #footer{
         width: 425px;
+        margin-top: -10px;
         #footerContainer{
             width: 425px;
             font-size: 10px;
