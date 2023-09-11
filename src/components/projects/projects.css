@@ -53,6 +53,7 @@
   background-color: black;
 }
 
+/* Projects Containers  */
 #projectsContainer{
   margin-top: 5.6rem;
   width: 95%;
@@ -70,6 +71,7 @@ background-color: rgba(255, 255, 255, 0.04);
   box-shadow: 5px 5px 3px rgba(217, 23, 31, 1);
 }
 
+/* Name of Containers (visable when unactive) */
 #projectName {
   display: flex;
   justify-content: center;
@@ -103,6 +105,8 @@ background-color: rgba(255, 255, 255, 0.04);
   font-size: 75px;
 }
 
+/* Explore Button */
+
 #linkBtn{
   background-color: rgba(0, 0, 0, 1);
   box-shadow: 3px 3px 3px rgba(217, 23, 31, 1);
@@ -115,6 +119,7 @@ background-color: rgba(255, 255, 255, 0.04);
 
 /* Media Queries */
 
+/* Mobile View */
 @media screen and (max-width:425px){
   #projects{
       width: 425px;
@@ -122,6 +127,7 @@ background-color: rgba(255, 255, 255, 0.04);
   }
 }
 
+/* Tablet View */
 @media screen and (max-width: 768px) {
   #projects{
     height: 1000px;

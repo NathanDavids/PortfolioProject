@@ -8,6 +8,8 @@ import Project3 from '../../assets/Project3.jpg'
 import Project4 from '../../assets/Project4.jpg'
 
 function projects({ isDarkMode }) {
+
+  // Provides the clicking animation for the project containers 
   const [activeItem, setActiveItem] = useState(0);
   const wrapperRef = useRef<HTMLUListElement | null>(null);
 
@@ -36,9 +38,13 @@ function projects({ isDarkMode }) {
   return (
     <>
     <section id='projects' className={isDarkMode ? 'dark' : 'light'}>
+
+      {/* The following contains the Project page content */}
     <div id='projectsContainer' className={`flex h-full w-full items-center justify-center ${isDarkMode ? 'dark' : 'light'}`}>
       <div className='w-[1200px] max-w-full h-full max-h-full'>
         <h1 id='projectsHeading' className={`flex justify-center font-bold text-8xl w-full text-center ${isDarkMode ? 'dark' : 'light'}`}>Projects</h1>
+        
+        {/* Contains the project containers and content */}
         <ul className={`group flex flex-col mt-10 md:h-[640px] md:flex-row md:gap-[1.5%] ${isDarkMode ? 'dark' : 'light'}`}>
           {List.map((Lists, index) => (
            <li id='contentContainer'
@@ -70,8 +76,8 @@ function projects({ isDarkMode }) {
               activeItem === index ? 'md:translate-x-0 md:opacity-100' : 'md:translate-x-4 md:opacity-0'
               }`}>
                 <a href={Lists.link} target="_blank"><button id='linkBtn' className={`text-lg uppercase text-[#FFFFFF] md:text-4xl ${
-    isDarkMode ? 'dark' : 'light'
-  }`}>Explore</button></a>
+                isDarkMode ? 'dark' : 'light'
+                }`}>Explore</button></a>
               </div>
               </div>
             </li>
