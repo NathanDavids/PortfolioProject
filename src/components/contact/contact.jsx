@@ -20,7 +20,7 @@ function contact({ isDarkMode }) {
 
   const [recaptchaValue, setRecaptchaValue] = useState(''); // To store reCAPTCHA response
 
-
+  // Validation Critera
   const handleChange = (e) => {
     const { name, value } = e.target;
   
@@ -140,8 +140,14 @@ function contact({ isDarkMode }) {
   return (
     <>
     <section id='contact' className={isDarkMode ? 'dark' : 'light'}>
+
+      {/* Contact Page Content */}
     <div id='contactContainer' className={`flex w-full min-h-screen max-w-4xl p-8 rounded-xl shadow-lg ${isDarkMode ? 'dark' : 'light'}`}>
+      
+      {/* Contact Me Form */}
       <div id='form' className={`form flex flex-col md:flex-row md:space-x-6 md:space-y-0 space-y-6 sm:p-12 w-full max-w-7xl p-8 rounded-xl shadow-lg text-white ${isDarkMode ? 'dark' : 'light'}`}>
+        
+        {/* Contact Me Text */}
         <div className={`flex flex-col space-y-8 justify-between ${isDarkMode ? 'dark' : 'light'}`}>
           <div>
             <h1 id='heading' className={`flex justify-center font-bold text-4xl tracking-wide ${isDarkMode ? 'dark' : 'light'}`}> Contact <span id='heading2'> Me </span> </h1>
@@ -149,6 +155,8 @@ function contact({ isDarkMode }) {
             <p id='subheading' className={`flex justify-center text-center pt-2 text-white-100 text-sm ${isDarkMode ? 'dark' : 'light'}`}> It would be amazing to chat, exchange ideas, and explore potential collaboration opportunities.
               Let's schedule a call or grab a coffee sometime soon. Looking forward to hearing from you and embarking on an exciting journey of creativity together. </p>
           </div>
+
+          {/* Personal Contact Information */}
           <div id='icon' className={`flex flex-col items-center space-y-4 ${isDarkMode ? 'dark' : 'light'}`}>
             <div className="inline-flex space-x-2 items-center">
               <FaMapMarkedAlt className="icon text-white-300 text-xl"/>
@@ -163,6 +171,8 @@ function contact({ isDarkMode }) {
               <span>+27 61 679 2852</span>
             </div>
           </div>
+
+          {/* Social Links */}
           <div className="flex justify-center text-4xl tracking-wide">
             <h2 id='socialHeading' className={isDarkMode ? 'dark' : 'light'}>Socials</h2>
           </div>
@@ -172,6 +182,8 @@ function contact({ isDarkMode }) {
             <a href="https://wa.link/38j3gp" target="_blank" rel="noopener noreferrer"><BsWhatsapp className='icon hover:text-[#D9171F]'/></a>
             <a href="https://www.instagram.com/nathandavids_dev/" target="_blank" rel="noopener noreferrer"><BsInstagram className='icon hover:text-[#D9171F]'/></a>
           </div>
+          
+          {/* Input fields for User */}
           <div id='inputContainer' className={`bg-black rounded-xl shadow-lg p-8 ${isDarkMode ? 'dark' : 'light'}`}>
             <form method='POST' className="flex flex-col space-y-4">
               <div>
@@ -190,12 +202,15 @@ function contact({ isDarkMode }) {
                 <label htmlFor="" className="text-sm"> Message </label>
                 <textarea type="text" placeholder="Message" name="Message" value={userData.Message} onChange={handleChange} autoComplete='off' rows="4" className={`text-gray-600 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#D9171F] ${userData.Message === '' ? 'bg-red-200' : (userData.isValidMessage ? 'bg-green-200' : 'bg-red-200')}`} />
               </div>
+
+              {/* ReCAPTCHA */}
               <ReCAPTCHA
                 id='recaptcha'
                 className='flex justify-center'
                 sitekey="6LfnjO8nAAAAAI_0dk6g7nEoRHcf-ptMEBe7zQ_z"
                 onChange={(value) => setRecaptchaValue(value)} // Store reCAPTCHA response
               />
+
               <button
                 id='sendBtn'
                 onClick={send}
