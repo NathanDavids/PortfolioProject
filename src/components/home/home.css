@@ -396,8 +396,14 @@
     }
 }
 
-/* @media screen and (max-width:1024px){
+@media screen and (min-width:1024px){
     #btnContainer{
         left: 1150px;
     }
-} */
+}
+
+@media screen and (min-width:1440px){
+    #btnContainer{
+        left: 1000px;
+    }
+}
