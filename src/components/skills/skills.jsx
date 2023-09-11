@@ -10,6 +10,7 @@ import Github from '../../assets/github.png'
 import JS from '../../assets/javascript.png'
 
 function skills({ isDarkMode }) {
+    // This provides the Hover Effect on the different Skill Containers
     useEffect(() => {
         let imgBx = document.querySelectorAll('.imgBx');
         let contentBx = document.querySelectorAll('.contentBx');
@@ -34,7 +35,11 @@ function skills({ isDarkMode }) {
   return (
     <>
     <section id='skills' className={`flex justify-center items-center h-screen ${isDarkMode ? 'dark' : 'light'}`}>
+
+        {/* The following contains the Skills Section Circle */}
       <div id='skillsContainer' className={`relative w-72 h-72 sm:w-96 sm:h-96 border-2 border-white rounded-full shadow-2xl ${isDarkMode ? 'dark' : 'light'}`}>
+          
+          {/* The following contains the Image Containers and the Images */}
           <div id='symbol' className='absolute left-0 w-full h-full flex justify-center items-center cursor-pointer'>
               <div className={`imgBx ${isDarkMode ? 'dark' : 'light'} active`} style={{ '--i': 1}} data-id='content1'>
                 <img src={HTML}/>
@@ -61,6 +66,8 @@ function skills({ isDarkMode }) {
                 <img src={JS}/>
             </div>
           </div>
+
+          {/* The following contains the Content Box Containers and content in the center of the circle */}
           <div className='content w-full h-full flex justify-center items-center'>
           <div className="contentBx active">
             <div className="card">
@@ -136,7 +143,7 @@ function skills({ isDarkMode }) {
                 </div>
                 <div className="textBx">
                     <h2>Github <br /><br /><span>
-GitHub enables developers to host, review, and manage code repositories for software projects. <br /><br /> 1 Year Experience</span></h2>
+                    GitHub enables developers to host, review, and manage code repositories for software projects. <br /><br /> 1 Year Experience</span></h2>
                 </div>
             </div>
         </div>

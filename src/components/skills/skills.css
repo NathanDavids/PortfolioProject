@@ -81,6 +81,7 @@
     background-color: black;
 }
 
+/* Circle and Image Containers */
 #skillsContainer{
     position: relative;
     width: 600px;
@@ -138,6 +139,7 @@
     filter: grayscale(0);
 }
 
+/* Provides the animation within the Skils Circle */
 .content{
     position: absolute;
     inset: 0;
@@ -195,6 +197,7 @@
     }
 }
 
+/* Content Box in the center of Circle */
 .contentBx
 {
     width: 35%;
@@ -277,6 +280,7 @@
 
 /* Media Queries */
 
+/* Mobile View */
 @media screen and (max-width:425px){
     #skills{
         width: 425px;
@@ -285,6 +289,7 @@
     }
 }
 
+/* Tablet View */
 @media screen and (max-width:768px){
     #skills{
         height: 800px;
