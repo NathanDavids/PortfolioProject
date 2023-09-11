@@ -55,10 +55,3 @@
         }
     }
 }
-
-/* Desktop View */
-@media screen and (min-width:1440px){
-    #footer{
-        position: relative;
-    }
-}

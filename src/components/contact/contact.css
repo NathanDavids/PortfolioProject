@@ -160,10 +160,9 @@
 /* Desktop View */
 @media screen and (min-width:1440px){
     #contact.dark{
-        height: 1400px;
+        height: 1300px;
         #contactContainer{
-            position: relative;
-            top: 400px;
+            height: 1300px;
             #form{
                 height: 1200px;
             }

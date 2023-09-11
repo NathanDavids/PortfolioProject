@@ -142,7 +142,7 @@ function contact({ isDarkMode }) {
     <section id='contact' className={isDarkMode ? 'dark' : 'light'}>
 
       {/* Contact Page Content */}
-    <div id='contactContainer' className={`flex w-full min-h-screen max-w-4xl p-8 rounded-xl shadow-lg ${isDarkMode ? 'dark' : 'light'}`}>
+    <div id='contactContainer' className={`flex w-full max-w-4xl p-8 rounded-xl shadow-lg ${isDarkMode ? 'dark' : 'light'}`}>
       
       {/* Contact Me Form */}
       <div id='form' className={`form flex flex-col md:flex-row md:space-x-6 md:space-y-0 space-y-6 sm:p-12 w-full max-w-7xl p-8 rounded-xl shadow-lg text-white ${isDarkMode ? 'dark' : 'light'}`}>
