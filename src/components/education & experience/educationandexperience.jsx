@@ -3,6 +3,7 @@ import '../education & experience/educationandexperience.css'
 import LiIcon from '../education & experience/LiIcon'
 import { motion, useScroll } from "framer-motion"
 
+// This allows provides the format and styling for the points in the list, while also ensuring the use of the bullet point styling from "Lilcon.jsx"
 const Details = ({position, company, time, address, work}) => {
   return (<li className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex-col items-center justify-between'>
 
@@ -35,6 +36,8 @@ const educationandexperience = ({ isDarkMode }) => {
   return (
     <>
     <section id='education' className={isDarkMode ? 'dark' : 'light'}>
+
+      {/* This contains the Education Information */}
     <div id='educationandexperienceContainer' className={isDarkMode ? 'dark' : 'light'}>
         <h2 id='educationHeading' className={`font-bold text-8xl mb-20 w-full text-center ${isDarkMode ? 'dark' : 'light'}`}>
             Education
