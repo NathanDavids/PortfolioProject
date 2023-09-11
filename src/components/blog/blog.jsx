@@ -5,7 +5,8 @@ import PostTwo from '../../assets/Two.png';
 import PostThree from '../../assets/Three.png';
 
 function Blog({ isDarkMode }) {
-  const [expandedPosts, setExpandedPosts] = useState(Array(3).fill(false)); // Initialize with the number of posts you have
+  // The following provides the Blog Post to display the content once read more is clicked
+  const [expandedPosts, setExpandedPosts] = useState(Array(3).fill(false));
 
   const handleExpandPost = (postIndex) => {
     const newExpandedPosts = expandedPosts.map((value, index) =>
@@ -17,10 +18,16 @@ function Blog({ isDarkMode }) {
   return (
     <>
       <section id='blog' className={isDarkMode ? 'dark' : 'light'}>
+        
+        {/* The following contains all the Blog Content */}
         <div id='blogContainer' className={`flex flex-col h-full w-full ${isDarkMode ? 'dark' : 'light'}`}>
+          
+          {/* The following contains the Blog Header Image and Text */}
           <div className="blogImage">
             <h1 className='blogHeading'> BLOG </h1>
           </div>
+
+          {/* The following contains the Blog Post Contianers */}
           <div className={`blogPostContainer grid md:flex justify-center items-center h-full w-full overflow-hidden gap-4 md:gap-8 ${isDarkMode ? 'dark' : 'light'}`}>
             {[
               { image: PostOne, heading: "Working World", text: "The start of my journey into becoming an adult..." },
@@ -38,8 +45,6 @@ function Blog({ isDarkMode }) {
                     {/* Expanded content */}
                     <h2 className='expandedHeading text-center'>{post.heading}</h2>
                     <p>
-                      {/* Add additional text or components specific to this post */}
-                      {/* For example: */}
                       {index === 0 && (
                         <>
                           <p className='text-center mt-5'>The transition into adulthood coincided with a pivotal opportunity at Innovo Networks. As a PABX Technician, my role encompassed not only technical support but also marked the commencement of practical experience in the professional realm. Innovo Networks provided the platform to bridge the gap between theoretical knowledge and hands-on application—a foundational step in my journey into the world of work.</p>
