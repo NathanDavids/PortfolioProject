@@ -26,6 +26,7 @@ const Details = ({position, company, time, address, work}) => {
 }
 
 const educationandexperience = ({ isDarkMode }) => {
+  // Provides the scroll animation
   const ref = useRef(null);
     const {scrollYProgress} = useScroll(
         {
