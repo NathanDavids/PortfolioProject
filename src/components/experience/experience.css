@@ -66,3 +66,13 @@
         height: 1350px;
     }
 }
+
+@media screen and (min-width:1440px){
+    #experience{
+        height: 1000px;
+    }
+
+    #experienceContainer{
+    height: 900px;
+    }
+}

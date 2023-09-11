@@ -401,3 +401,17 @@
         left: 1150px;
     }
 }
+
+@media screen and (min-width:1440px){
+    #home{
+        #homeContainer{
+            #homeSocialsContainer{
+                left: 1080px;
+            }
+            #btnContainer{
+                left: 1080px;
+            }
+        }
+        
+    } 
+}
