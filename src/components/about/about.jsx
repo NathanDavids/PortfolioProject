@@ -6,6 +6,8 @@ import {FaGreaterThan} from 'react-icons/fa'
 
 function about({ isDarkMode }) {
 
+  // The following allows the "Projects" - Previous Work to run a counter once the user scrolls down and the container becomes visable 
+
   const projects = document.querySelector('#projectsBlock');
   const counter = document.querySelectorAll('.counter');
   let bol = false; 
@@ -52,15 +54,20 @@ function about({ isDarkMode }) {
     <>
     <section id='about' className={isDarkMode ? 'dark' : 'light'}>
     <div id='aboutContainer' className={isDarkMode ? 'dark' : 'light'}>
+
+      {/* This containes the About Me container and content */}
       <div id="aboutTop" className={isDarkMode ? 'dark' : 'light'}>
         <div id='aboutHead' className={isDarkMode ? 'dark' : 'light'}>
           <h1 id='aboutHeading' className={isDarkMode ? 'dark' : 'light'}> About Me </h1>
           <hr id='aboutLine' className={isDarkMode ? 'dark' : 'light'}/>
         </div>
+
+        {/* This containes the Image */}
         <div id='aboutTopContent' className={isDarkMode ? 'dark' : 'light'}>
           <div id='imgContainer' className={isDarkMode ? 'dark' : 'light'}>
             <img src={AboutPicture} alt="" id='aboutImg'/>
           </div>
+          {/* This containes all the text within the container */}
           <div id='textContainer' className={isDarkMode ? 'dark' : 'light'}>
             <h1 id='Heading' className={isDarkMode ? 'dark' : 'light'}>FULL-STACK <span id='headingRed'> DEVELOPER </span></h1>
             <br />
@@ -82,6 +89,8 @@ function about({ isDarkMode }) {
           </div>
         </div>
       </div>
+
+      {/* This containes the Interest section and all it's content */}
       <div id='aboutBottom'>
         <div id='interestHead' className={isDarkMode ? 'dark' : 'light'} >
           <h1 id='aboutHeading' className={isDarkMode ? 'dark' : 'light'}> Interests </h1>
@@ -111,6 +120,8 @@ function about({ isDarkMode }) {
             </div>
           </div>
         </div>
+
+        {/* This contains the Previous Work container and it's heading */}
         <div id='workHead' className={isDarkMode ? 'dark' : 'light'}>
           <hr id='workLine1' className={isDarkMode ? 'dark' : 'light'}/>
           <h1 id='workHeading'> Previous Work </h1>
@@ -122,6 +133,7 @@ function about({ isDarkMode }) {
             <h1 className='projectLabel'>Projects</h1>
           </div>
         </div>
+
       </div>
     </div>
     </section>
