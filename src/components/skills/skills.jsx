@@ -5,7 +5,7 @@ import CSS from '../../assets/css.png'
 import LogoReact from '../../assets/reactSkills.png'
 import Python from '../../assets/python.png'
 import Java from '../../assets/java.png'
-import VisualStudio from '../../assets/visualstudio.png'
+import VisualBasic from '../../assets/visualbasic.png'
 import Github from '../../assets/github.png'
 import JS from '../../assets/javascript.png'
 
@@ -57,7 +57,7 @@ function skills({ isDarkMode }) {
                 <img src={Java}/>
             </div>
             <div className={`imgBx ${isDarkMode ? 'dark' : 'light'}`} style={{ '--i': 6}} data-id='content6'>
-                <img src={VisualStudio}/>
+                <img src={VisualBasic}/>
             </div>
             <div className={`imgBx ${isDarkMode ? 'dark' : 'light'}`} style={{ '--i': 7}} data-id='content7'>
                 <img src={Github}/>
@@ -129,7 +129,7 @@ function skills({ isDarkMode }) {
         <div className="contentBx" id='content6'>
             <div className="card">
                 <div className="imgBx">
-                    <img src={VisualStudio}/>
+                    <img src={VisualBasic}/>
                 </div>
                 <div className="textBx">
                     <h2>Visual Basic <br /><br /><span>Visual Basic is an (IDE) developed by Microsoft, designed to facilitate the creation of GUI applications. <br /><br />3 Years Experience</span></h2>

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import '../projects/projects.css'
 import { List } from './List'
-import Car from '../../assets/car.jpg'
 import Project1 from '../../assets/Project1.jpg'
 import Project2 from '../../assets/Project2.jpg'
 import Project3 from '../../assets/Project3.jpg'
