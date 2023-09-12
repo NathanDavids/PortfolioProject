@@ -58,7 +58,7 @@ function home() {
           <div id='nameContainer'>
             <h1 className='name'>Nathan <span className='surnameText'>Davids</span> Nathan <span className='surnameText'> Davids </span>
             Nathan <span className='surnameText'>Davids </span> Nathan <span className='surnameText'> Davids </span> Nathan 
-            <span className='surnameText'>Davids</span>
+            <span className='surnameText'> Davids</span> Nathan <span className='surnameText'> Davids </span>
             </h1>         
           </div>
           <div id='homeImgContainer'>
