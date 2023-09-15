@@ -72,6 +72,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin: auto;
+    max-width: 100%;
     padding: 1rem;
     z-index: 1000;
     background-color: black;
@@ -212,36 +214,36 @@
 
 @media screen and (min-width: 1240px){
     .header{
-        padding: 1rem 8.5rem;
+        padding: 1rem 2.5rem;
     }
 }
 
 @media screen and (max-width:320px){
     .header{
-        width: 320px;
+        max-width: 100%;
     }
 }
 
 @media screen and (max-width:375px){
     .header{
-        width: 375px;
+        max-width: 100%;
     }
 }
 
 @media screen and (max-width:425px){
     .header{
-        width: 425px;
+        max-width: 100%;
     }
 }
 
 @media screen and (max-width:768px){
     .header{
-        width: 768px;
+        max-width: 100%;
     }
 }
 
 @media screen and (max-width:1024px){
     .header{
-        width: 1024px;
+        max-width: 100%;
     }
 }
