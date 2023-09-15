@@ -257,24 +257,26 @@
                 animation: name 16s linear infinite;
             }
             #homeTextContainer{
-                max-height: 20%;
+            max-height: 30%;
             max-width: 90%;
+            left: 5%;
             }
             #homeQuote{
             font-size: 35px;
             }
             #homeSocialsContainer{
             max-width: 90%;
+            left: 5%;
             }
             #btnContainer{
             max-width: 22%;
+            left: 38%;
             }
         }    
     }
 }
 
 /* Tablet View */
-
 @media screen and (max-width:768px) and (max-width:1024px){
     #home{
         width: 100%;
@@ -308,7 +310,7 @@
        width: 450px;
        height: 150px;
        top: -650px;
-       left: 20px;
+       left: 30px;
     }
     #homeQuote{
         font-size: 40px;
@@ -327,7 +329,7 @@
     }
 }
 
-@media screen and (min-width:768px) and (max-width:1024px) and (max-width:1024px){
+@media screen and (max-width:768px){
     #mainContainer{
         display: grid;
 
@@ -348,25 +350,62 @@
         height: 440px;
     }
     #homeTextContainer{
-       width: 708px;
-       height: 150px;
-       top: -650px;
-       left: 13px;
+       max-width: 100%;
+       left: 20%;
     }
     #homeQuote{
-        font-size: 45px;
+        font-size: 35px;
     }
     #homeSocialsContainer{
-       top: -670px;
-       left: 13px;
+       top: -100%;
+       left: 20%;
        display: flex;
        justify-content: space-around;
        height: 100px;
-       width: 708px;
+       max-width: 100%;
     }
     #btnContainer{
         top: -670px;
         left: 270px;
+    }
+}
+
+@media screen and (min-width:800px){
+    #nameContainer{
+        top: 0%;
+    }
+    #homeImgContainer{
+        height: 300px;
+        top: -2%;
+    }
+    .homeImg{
+        height: 900px;
+        width: 900px;
+    }
+    #homeTextContainer{
+        top: -55%;
+    }
+    #homeQuote{
+        max-width: 70%;
+        font-size: 35px;
+    }
+    #homeSocialsContainer{
+        top: -120%;
+        left: 42%;
+        gap: 20px;
+        justify-content: space-around;
+        height: 100px;
+        max-width: 100%;
+     }
+    #btnContainer{
+        top: -100%;
+        left: 42%;
+        max-width: 100%;
+    }
+    #downloadBtn{
+        font-size: 15px;
+        width: 120px;
+        height: 50px;
     }
 }
 
@@ -381,7 +420,7 @@
         left: 15px;
     }
     #homeQuote{
-        font-size: 50px;
+        font-size: 40px;
     }
     #homeSocialsContainer{
         left: 950px;
