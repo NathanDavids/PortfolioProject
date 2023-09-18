@@ -251,6 +251,7 @@
 /* XL Screens */
 @media screen and (min-width:2480px){
     .header{
+        max-width: 100%;
         padding: 1rem 25rem;
     }
     .logo{
