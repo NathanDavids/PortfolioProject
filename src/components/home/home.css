@@ -329,6 +329,8 @@
     }
 }
 
+/* Tablets */
+
 @media screen and (max-width:768px){
     #mainContainer{
         display: grid;
@@ -370,13 +372,17 @@
     }
 }
 
-@media screen and (min-width:800px){
+/* Tablets (Large) */
+@media screen and (min-width:800px) and (max-width:950px){
     #nameContainer{
         top: 0%;
     }
     #homeImgContainer{
         height: 300px;
         top: -2%;
+    }
+    #nameContainer{
+        top: 50px;
     }
     .homeImg{
         height: 900px;
@@ -474,4 +480,33 @@
         }
         
     } 
+}
+
+/* XL Screens */
+@media screen and (min-width:2048px){
+    #home{
+        max-width: 100%;
+    }
+    #homeContent{
+        max-width: 100%;
+    }
+    #nameContainer{
+        top: 10%;
+    }
+    #homeTextContainer{
+        max-width: 30%;
+        top: -50%;
+        left: 5%;
+    }
+    #homeSocialsContainer{
+        display: flex;
+        gap: 8%;
+        max-width: 70%;
+        top: -130%;
+        left: 50%;
+    }
+    #btnContainer{
+        max-width: 70%;
+        top: -145%;
+    }
 }
