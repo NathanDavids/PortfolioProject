@@ -52,17 +52,42 @@
             }
         }
     }
+    #experience.light{
+        max-width: 100%;
+        height: 2400px;
+        #experienceContainer{
+            max-width: 100%;
+            height: 2400px;
+            #experienceHeading{
+                font-size: 70px;
+            }
+            .companyText{
+                font-size: large;
+            }
+        }
+    }
 }
 
 
 /* Tablet View */
 
-@media screen and (min-width:768px) and (max-width:1024px){
-    #experience{
+@media screen and (min-width:768px) and (max-width:799px){
+    #experience.dark{
+        max-width: 100%;
         height: 1500px;
+        #experienceContainer{
+            height: 1300px;
+        }
+    }
+}
+
+/* Tablets (Large) */
+@media screen and (min-width:800px) and (max-width:950px){
+    #experience.dark{
+        height: 1600px;
     }
     #experienceContainer{
-        height: 1400px;
+        height: 1500px;
     }
 }
 
