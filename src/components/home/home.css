@@ -225,7 +225,7 @@
 
 /* Mobile View */
 
-@media screen and (max-width:425px){
+@media screen and (max-width:428px){
 
             #home{
             width: 100%;
@@ -248,7 +248,7 @@
             align-items: center;
             background-color: rgba(0, 0, 0, 0);
             position: relative;
-            top: -113px;
+            top: -28%;
             left: -20px;
             height: 100%;
             max-width: 100%;
