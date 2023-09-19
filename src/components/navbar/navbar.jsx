@@ -69,6 +69,11 @@ function Navbar() {
     };
   }, []); // Empty dependency array to ensure the effect runs only once
 
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+    removeNavbar(); // Closes the navbar when an item is clicked
+  };
+
   return (
     <>
       <section className={`navBarSection ${isDarkMode ? 'dark' : 'light'}`}>
@@ -87,48 +92,49 @@ function Navbar() {
                 key={item}
                 className={`navItem ${selectedItem === item ? 'selected' : ''} ${isDarkMode ? 'dark' : 'light'}`}
               >
-            <a
-              href={`#${item.toLowerCase()}`}
-              className={`navLink ${isDarkMode ? 'dark' : 'light'}`}
-              onClick={() => setSelectedItem(item)} // Set selected item on click
-            >
-              {item}
-            </a>
-            {activeItemPosition === index && <div className="activeLine" />}
-            </li>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className={`navLink ${isDarkMode ? 'dark' : 'light'}`}
+                  onClick={() => handleItemClick(item)} // Call handleItemClick
+                >
+                  {item}
+                </a>
+                {activeItemPosition === index && <div className="activeLine" />}
+              </li>
             )
-            )}
-            <li className="navItem">
+          )}
+          <li className="navItem">
             <button className={`theme ${isDarkMode ? 'dark' : 'light'}`} onClick={toggleDarkMode}>
-            {isDarkMode ? (
-              <MdLightMode className="lightIcon" />
-            ) : (
-              <BsMoonStarsFill className="darkIcon" />
-            )}
+              {isDarkMode ? (
+                <MdLightMode className="lightIcon" />
+              ) : (
+                <BsMoonStarsFill className="darkIcon" />
+              )}
             </button>
           </li>
           </ul>
 
-            <div onClick={removeNavbar} className='closeNavbar'>
-              <AiFillCloseCircle className={`icon ${isDarkMode ? 'dark' : 'light'}`} />
-            </div>
+          <div onClick={removeNavbar} className='closeNavbar'>
+            <AiFillCloseCircle className={`icon ${isDarkMode ? 'dark' : 'light'}`} />
           </div>
+        </div>
 
-          <div onClick={showNav} className={`toggleNavbar ${isDarkMode ? 'dark' : 'light'}`}>
-            <BiMenu className={`icon ${isDarkMode ? 'dark' : 'light'}`} />
-          </div>
-        </header>
-      </section>
-      <Home isDarkMode={isDarkMode} />
-      <About isDarkMode={isDarkMode} />
-      <EducationAndExperience isDarkMode={isDarkMode} />
-      <Experience isDarkMode={isDarkMode} />
-      <Skills isDarkMode={isDarkMode}/>
-      <Projects isDarkMode={isDarkMode}/>
-      <Blog isDarkMode={isDarkMode}/>
-      <Contact isDarkMode={isDarkMode}/>
-      <Footer isDarkMode={isDarkMode}/>
-    </>
+        <div onClick={showNav} className={`toggleNavbar ${isDarkMode ? 'dark' : 'light'}`}>
+          <BiMenu className={`icon ${isDarkMode ? 'dark' : 'light'}`} />
+        </div>
+      </header>
+    </section>
+    {/* This allows the Dark and Light Mode state to pass through all the other components (to trigger the same mode simultaneously) */}
+    <Home isDarkMode={isDarkMode} />
+    <About isDarkMode={isDarkMode} />
+    <EducationAndExperience isDarkMode={isDarkMode} />
+    <Experience isDarkMode={isDarkMode} />
+    <Skills isDarkMode={isDarkMode} />
+    <Projects isDarkMode={isDarkMode} />
+    <Blog isDarkMode={isDarkMode} />
+    <Contact isDarkMode={isDarkMode} />
+    <Footer isDarkMode={isDarkMode} />
+  </>
   );
 }
 

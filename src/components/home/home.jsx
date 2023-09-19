@@ -6,7 +6,6 @@ import HomePicture from '../../assets/HomePicture3.png'
 import { BsLinkedin } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 import { IoLogoWhatsapp } from 'react-icons/io'
-import { MdLightMode } from 'react-icons/md'
 import CV from '../../assets/NathanDavids_CV.pdf'
 
 function home({isDarkMode}) {
@@ -69,8 +68,6 @@ function home({isDarkMode}) {
           </div>
       </div>
     </section>
-
-    {/* This allows the Dark and Light Mode state to pass through all the other components (to trigger the same mode simultaneously) */}
     </>
   )
 }
