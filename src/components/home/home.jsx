@@ -60,7 +60,6 @@ function home({isDarkMode}) {
           <a href="https://www.linkedin.com/in/nathan-davids-7a857b233/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='icon hover:text-[#D9171F]'/></a>
           <a href="https://github.com/NathanDavids" target="_blank" rel="noopener noreferrer"><BsGithub className='icon hover:text-[#D9171F]'/></a>
           <a href="https://wa.link/38j3gp" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp className='icon hover:text-[#D9171F]'/></a>
-          <button><MdLightMode className='icon hover:text-[#D9171F]'/> </button>
         </div>
 
         {/* CV Button Container */}
