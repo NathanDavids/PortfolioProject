@@ -42,9 +42,34 @@
     color: #D9171F;
 }
 
+.theme.light{
+    background-color: #d1d1d1;
+}
 
 
 /* Main CSS */
+
+/* Light/Dark Mode Trigger (Icons) */
+.theme{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: #222;
+}
+
+.lightIcon{
+    position: relative;
+    left: 25%;
+    font-size: 20px;
+    color: gold;
+}
+
+.darkIcon{
+    position: relative;
+    left: 25%;
+    font-size: 20px;
+    color: rgb(15, 15, 172);
+}
 
 /* The NavBar underline */
 .navItem {

@@ -13,7 +13,7 @@ import Contact from './components/contact/contact'
 function App() {
   return (
     <>
-    <Home/>
+    <Navbar/>
     </>
   )
 }

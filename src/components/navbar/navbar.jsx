@@ -4,8 +4,28 @@ import { AiFillCloseCircle } from 'react-icons/ai';
 import { BiMenu } from 'react-icons/bi';
 import LogoDark from '../../assets/Logo_Dark.png';
 import LogoLight from '../../assets/Logo_Light.png';
+import { MdLightMode } from 'react-icons/md';
+import { BsMoonStarsFill } from 'react-icons/bs';
+import Home from '../home/home';
+import About from '../about/about';
+import EducationAndExperience from '../education & experience/educationandexperience'
+import Experience from '../experience/experience';
+import Skills from '../skills/skills';
+import Projects from '../projects/projects';
+import Blog from '../blog/blog'
+import Contact from '../contact/contact'
+import Footer from '../footer/footer'
 
-function Navbar({ isDarkMode }) {
+function Navbar() {
+  /* The following activates dark and light mode */
+  const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('theme') === 'dark');
+
+  const toggleDarkMode = () => {
+    const newTheme = isDarkMode ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
+    setIsDarkMode(newTheme === 'dark');
+  };
+  
   const [active, setActive] = useState('navBar');
   const [selectedItem, setSelectedItem] = useState(null);
   const [activeItemPosition, setActiveItemPosition] = useState(-1);
@@ -67,18 +87,27 @@ function Navbar({ isDarkMode }) {
                 key={item}
                 className={`navItem ${selectedItem === item ? 'selected' : ''} ${isDarkMode ? 'dark' : 'light'}`}
               >
-          <a
-            href={`#${item.toLowerCase()}`}
-            className={`navLink ${isDarkMode ? 'dark' : 'light'}`}
-            onClick={() => setSelectedItem(item)} // Set selected item on click
-          >
-            {item}
-          </a>
-        {activeItemPosition === index && <div className="activeLine" />}
-      </li>
-    )
-  )}
-</ul>
+            <a
+              href={`#${item.toLowerCase()}`}
+              className={`navLink ${isDarkMode ? 'dark' : 'light'}`}
+              onClick={() => setSelectedItem(item)} // Set selected item on click
+            >
+              {item}
+            </a>
+            {activeItemPosition === index && <div className="activeLine" />}
+            </li>
+            )
+            )}
+            <li className="navItem">
+            <button className={`theme ${isDarkMode ? 'dark' : 'light'}`} onClick={toggleDarkMode}>
+            {isDarkMode ? (
+              <MdLightMode className="lightIcon" />
+            ) : (
+              <BsMoonStarsFill className="darkIcon" />
+            )}
+            </button>
+          </li>
+          </ul>
 
             <div onClick={removeNavbar} className='closeNavbar'>
               <AiFillCloseCircle className={`icon ${isDarkMode ? 'dark' : 'light'}`} />
@@ -90,6 +119,15 @@ function Navbar({ isDarkMode }) {
           </div>
         </header>
       </section>
+      <Home isDarkMode={isDarkMode} />
+      <About isDarkMode={isDarkMode} />
+      <EducationAndExperience isDarkMode={isDarkMode} />
+      <Experience isDarkMode={isDarkMode} />
+      <Skills isDarkMode={isDarkMode}/>
+      <Projects isDarkMode={isDarkMode}/>
+      <Blog isDarkMode={isDarkMode}/>
+      <Contact isDarkMode={isDarkMode}/>
+      <Footer isDarkMode={isDarkMode}/>
     </>
   );
 }

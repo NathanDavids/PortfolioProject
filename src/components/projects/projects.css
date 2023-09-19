@@ -38,7 +38,8 @@
 }
 
 #linkBtn.light{
-  top: 150px;
+  top: 30%;
+  left: -30%;
 }
 
 /* Main CSS */
@@ -159,6 +160,9 @@ background-color: rgba(255, 255, 255, 0.04);
       top: 550%;
     }
   }
+  #contentContainer.light{
+    height: 180px;
+  }
 }
 
 /* Tablet View */
@@ -210,9 +214,6 @@ background-color: rgba(255, 255, 255, 0.04);
     display: flex;
     justify-content: center;
     margin-top: 30px;
-  }
-  #contentContainer.light{
-    height: 600px;
   }
 }
 

@@ -1,15 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../home/home.css'
 import '../about/about'
-import Navbar from '../navbar/navbar';
-import About from '../about/about'
-import EducationAndExperience from '../education & experience/educationandexperience'
-import Experience from '../experience/experience';
-import Skills from '../skills/skills';
-import Projects from '../projects/projects';
-import Blog from '../blog/blog'
-import Contact from '../contact/contact'
-import Footer from '../footer/footer'
 import Typed from 'typed.js'; // Import the Typed library
 import HomePicture from '../../assets/HomePicture3.png'
 import { BsLinkedin } from 'react-icons/bs'
@@ -18,17 +9,7 @@ import { IoLogoWhatsapp } from 'react-icons/io'
 import { MdLightMode } from 'react-icons/md'
 import CV from '../../assets/NathanDavids_CV.pdf'
 
-function home() {
-
-  /* The following activates dark and light mode */
-  const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('theme') === 'dark');
-
-  const toggleDarkMode = () => {
-    const newTheme = isDarkMode ? 'light' : 'dark';
-    localStorage.setItem('theme', newTheme);
-    setIsDarkMode(newTheme === 'dark');
-  };
-
+function home({isDarkMode}) {
   /* The following provides the Typing effect to the quote */
   useEffect(() => {
     // Initialize Typed within the useEffect hook
@@ -48,7 +29,6 @@ function home() {
 
   return (
     <>
-    <Navbar isDarkMode={isDarkMode}/>
     <section id='home' className={isDarkMode ? 'dark' : 'light'}>
       <div id='homeContainer'>
 
@@ -80,7 +60,7 @@ function home() {
           <a href="https://www.linkedin.com/in/nathan-davids-7a857b233/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='icon hover:text-[#D9171F]'/></a>
           <a href="https://github.com/NathanDavids" target="_blank" rel="noopener noreferrer"><BsGithub className='icon hover:text-[#D9171F]'/></a>
           <a href="https://wa.link/38j3gp" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp className='icon hover:text-[#D9171F]'/></a>
-          <button onClick={toggleDarkMode}><MdLightMode className='icon hover:text-[#D9171F]'/> </button>
+          <button><MdLightMode className='icon hover:text-[#D9171F]'/> </button>
         </div>
 
         {/* CV Button Container */}
@@ -92,14 +72,6 @@ function home() {
     </section>
 
     {/* This allows the Dark and Light Mode state to pass through all the other components (to trigger the same mode simultaneously) */}
-    <About isDarkMode={isDarkMode} />
-    <EducationAndExperience isDarkMode={isDarkMode} />
-    <Experience isDarkMode={isDarkMode} />
-    <Skills isDarkMode={isDarkMode}/>
-    <Projects isDarkMode={isDarkMode}/>
-    <Blog isDarkMode={isDarkMode}/>
-    <Contact isDarkMode={isDarkMode}/>
-    <Footer isDarkMode={isDarkMode}/>
     </>
   )
 }

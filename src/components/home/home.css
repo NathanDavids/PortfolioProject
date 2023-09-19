@@ -353,14 +353,14 @@
     }
     #homeTextContainer{
        max-width: 100%;
-       left: 20%;
+       left: 22%;
     }
     #homeQuote{
         font-size: 35px;
     }
     #homeSocialsContainer{
        top: -100%;
-       left: 20%;
+       left: 22%;
        display: flex;
        justify-content: space-around;
        height: 100px;
@@ -368,7 +368,7 @@
     }
     #btnContainer{
         top: -670px;
-        left: 270px;
+        left: 38%;
     }
 }
 
