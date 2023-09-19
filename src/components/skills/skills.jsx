@@ -34,6 +34,7 @@ function skills({ isDarkMode }) {
   
   return (
     <>
+    <h1 id='skillsHeading' className={`flex justify-center font-bold text-8xl w-full text-center ${isDarkMode ? 'dark' : 'light'}`}>Skills</h1>
     <section id='skills' className={`flex justify-center items-center h-screen ${isDarkMode ? 'dark' : 'light'}`}>
 
         {/* The following contains the Skills Section Circle */}
@@ -69,13 +70,6 @@ function skills({ isDarkMode }) {
 
           {/* The following contains the Content Box Containers and content in the center of the circle */}
           <div className='content w-full h-full flex justify-center items-center'>
-          <div className="contentBx active">
-            <div className="card">
-                <div className="textBx">
-                    <h2>SKILLS</h2>
-                </div>
-            </div>
-        </div>
         <div className="contentBx" id='content1'>
             <div className="card">
                 <div className="imgBx">

@@ -36,7 +36,7 @@ function Blog({ isDarkMode }) {
             ].map((post, index) => (
               <div
                 key={index}
-                className={`postContainer overflow-hidden items-center w-full sm:w-[30%] sm:-h[68%] md:w-[30%] md:h-[76%] lg:w-full lg-h[80%] xl:w-[35%] xl:h-[82%] bg-white rounded-lg p-4 flex flex-col space-y-3 ${
+                className={`postContainer overflow-hidden items-center w-full sm:w-[30%] sm:-h[68%] md:w-[30%] md:h-[76%] lg:w-full lg-h[85%] xl:w-[35%] xl:h-[85%] bg-white rounded-lg p-4 flex flex-col space-y-3 ${
                 expandedPosts[index] ? 'expanded' : ''
               } ${isDarkMode ? 'dark' : 'light'}`}
               >
