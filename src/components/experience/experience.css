@@ -70,7 +70,6 @@
 
 
 /* Tablet View */
-
 @media screen and (min-width:768px) and (max-width:799px){
     #experience.dark{
         max-width: 100%;

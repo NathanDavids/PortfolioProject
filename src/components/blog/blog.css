@@ -144,8 +144,16 @@
         height: 2000px;
     }
 }
-
 @media screen and (min-width:768px){
+    #blog{
+        height: 1000px;
+    }
+    #blogContainer{
+        height: 900px;
+    }
+}
+
+@media screen and (max-width:768px){
     .postContainer{
         .postHeading{
             line-height: 30px;
