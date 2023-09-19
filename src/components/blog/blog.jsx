@@ -31,12 +31,12 @@ function Blog({ isDarkMode }) {
           <div className={`blogPostContainer grid md:flex justify-center items-center h-full w-full overflow-hidden gap-4 md:gap-8 ${isDarkMode ? 'dark' : 'light'}`}>
             {[
               { image: PostOne, heading: "Working World", text: "The start of my journey into adulthood..." },
-              { image: PostTwo, heading: "New Beginnings", text: "The opportunity I've been waiting for..." },
-              { image: PostThree, heading: "One Step Closer", text: "6 months later and phase 2 has begun..." },
+              { image: PostTwo, heading: "New Beginnings", text: "This is the opportunity I've been waiting for..." },
+              { image: PostThree, heading: "One Step Closer", text: "6 months later and phase 2 has finally begun..." },
             ].map((post, index) => (
               <div
                 key={index}
-                className={`postContainer overflow-hidden items-center w-full sm:w-[30%] sm:-h[68%] md:w-[30%] md:-h[68%] lg:w-full lg-h[80%] xl:w-[35%] bg-white rounded-lg p-4 flex flex-col space-y-3 ${
+                className={`postContainer overflow-hidden items-center w-full sm:w-[30%] sm:-h[68%] md:w-[30%] md:h-[76%] lg:w-full lg-h[80%] xl:w-[35%] xl:h-[82%] bg-white rounded-lg p-4 flex flex-col space-y-3 ${
                 expandedPosts[index] ? 'expanded' : ''
               } ${isDarkMode ? 'dark' : 'light'}`}
               >
