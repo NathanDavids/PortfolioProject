@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import '../home/home.css'
 import '../about/about'
 import Typed from 'typed.js'; // Import the Typed library
