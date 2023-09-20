@@ -85,3 +85,16 @@
       height: 1000px;
     }
 }
+
+/* Large Desktop Screens  */
+
+@media screen and (min-width:2460px){
+    #education{
+        max-width: 100%;
+        height: 1000px;
+    }
+    #educationandexperienceContainer{
+        max-width: 100%;
+        height: 800px;
+    }
+}
